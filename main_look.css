@@ -1,0 +1,282 @@
+@font-face {
+	font-family: Title;
+	src: url("photos/Title.ttf");
+}
+
+@font-face {
+	font-family: BodyText;
+	src: url("photos/BodyText.ttf");
+}
+
+body {
+	font-family: BodyText;
+	margin: 0;
+	background-color: #FFF9F1;
+}
+
+header {
+	display: flex;
+	height: 28em;
+	margin: 0;
+	background-image: url("photos/top.png");
+	background-size: 5em;
+	background-repeat: no-repeat;
+	position: static;
+}
+
+header h1 {
+	display: flex;
+	flex-grow: 1;
+	align-self: center;
+	justify-content: center;
+	color: black;
+	height: 20%;
+	margin-top: 7%;
+	font-family: Title;
+	font-size: 3em;
+}
+
+header a {
+	text-decoration: none;
+	color: black;
+}
+
+header p {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 30%;
+	color: #E9E7E7;
+	margin: 1%;
+	align-self: center;
+}
+
+header span {
+	margin-bottom: 2%;
+	margin-top: 2%;
+}
+
+#menubutton {
+	background-color: #E1E0E1;
+	color: #EE964B;
+	width: 100%;
+	height: 60px;
+	border: none;
+	font-family: Title;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#menu {
+	display: inline-block;
+	width: 100%;
+	margin: 0;
+}
+
+#menulist {
+	display: none;
+	position: absolute;
+	background-color: #E9E7E7;
+	margin: 0;
+	flex-direction: column;
+	width: 100%;
+	height: auto;
+}
+
+#menulist a {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	color: black;
+	text-decoration: none;
+	width: 100%;
+}
+
+#menulist li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+	width: 100%;
+}
+
+#menulist ul {
+	margin: 0;
+	padding: 0;
+	height: auto;
+	width: 100%;
+}
+
+#menulist p{
+	margin: 0;
+	padding-bottom: 12px;
+	padding-top: 12px;
+}
+
+#menulist a:hover {
+	color: #EE964B;
+}
+
+#menu:hover #menubutton {
+	background-color: #E1E0E1;
+	color: #919091;
+}
+
+#description {
+	display: flex;
+	background-color: #E9E7E7;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+#description h2 {
+	display: flex;
+	font-size: 2em;
+	font-family: Title;
+	flex-basis: 25%;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-bottom: 5%;
+	color: #EE964B;
+}
+
+#description p {
+	display: flex;
+	align-self: flex-start;
+	text-align: justify;
+	flex-basis: 60%;
+	margin-top: 7em;
+	margin-bottom: 5em;
+	margin-left: 5%;
+	margin-right: 2%;
+}
+
+main {
+	display: flex;
+	background-color: #E9E7E7;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+#projects {
+	display: flex;
+	flex-direction: column;
+	padding-right: 1%;
+	padding-left: 1%;
+	padding-top: 5%;
+	background-image: url("photos/mid.png");
+	background-size: 5em;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-position-x: right;
+	position: static;
+}
+
+#projects h2 {
+	font-weight: bold;
+	margin-left: 4%;
+	font-size: 2em;
+	font-family: Title;
+}
+
+.project_text {
+	margin-top: 4%;
+	margin-bottom: 9%;
+	margin-left: 7%;
+	margin-right: 4%;
+}
+
+.cars {
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	margin-top: 3%;
+	align-items: center;
+	align-self: center;
+	background-color: #E9E7E7;
+	margin-bottom: 3%;
+	text-decoration: none;
+	color: #EE964B;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	font-family: Title;
+	font-size: 1.5em;
+}
+
+.cars h3 {
+	font-weight: bold;
+	margin-bottom: 3%;
+	margin-top: 3%;
+	font-family: Title;
+}
+
+.cars a {
+	color: #EE964B;
+	text-decoration: none;
+}
+
+.cars:hover{
+	color: #919091;
+}
+
+ul li {
+	font-size: 16px;
+	margin-bottom: 6%;
+	margin-top: 6%;
+}
+
+footer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	background-color: #E1E0E1;
+	height: 10em;
+	align-items: center;
+	margin-top: 8%;
+}
+
+footer h2 {
+	flex-grow: 1;
+	font-size: 2em;
+	text-align: center;
+	color: #EE964B;
+	font-family: Title;
+}
+
+#contact {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	flex-grow: 2;
+}
+
+#contact p {
+	margin-bottom: 1%;
+	margin-top: 1%;
+}
+
+@media all and (max-width: 900px) {
+	#description {
+		display: flex;
+		flex-direction: column;
+		background-color: #E9E7E7;
+		flex-wrap: nowrap;
+		align-items: center;
+		padding-bottom: 8%;
+		padding-top: 5%;
+	}
+
+	#description h2 {
+		display: flex;
+		align-self: flex-end;
+		font-family: Title;
+		flex-basis: 25%;
+		margin: 6% 11% 6% 2%;
+		color: #EE964B;
+	}
+
+	#description p {
+		display: flex;
+		flex-basis: 60%;
+		margin: 3% 8% 6%;
+	}
+}

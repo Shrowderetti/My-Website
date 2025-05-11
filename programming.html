@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Programming</title>
+        <link type="text/css" rel="stylesheet" href="subpages.css">
+        <meta charset="UTF-8">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="jsex8.js"></script>
+    </head>
+    <body id="body">
+        <section id="Base">
+            <article>
+                <h1><a href="index.html">Adam Koziana</a></h1>
+            </article>
+            <nav id="menu">
+                <button id="menubutton">Menu</button>
+                <nav id="menulist">
+                    <ul>
+                        <li><a href="index.html"><p>Main page</p></a></li>
+                        <li><a href="photography.html"><p>Photography</p></a></li>
+                        <li><a href="3d.html"><p>3D renders</p></a></li>
+                        <li><a href="drawings.html"><p>Drawings</p></a></li>
+                        <li><a href="programming.html"><p>Programming</p></a></li>
+                        <li><a href="https://www.linkedin.com/in/adamkoziana/" target="_blank"><p>LinkedIn</p></a></li>
+                        <li><a href="https://github.com/Shrowderetti" target="_blank"><p>GitHub</p></a></li>
+                        <li><a href="https://github.com/Shrowderetti/CV" target="_blank"><p>CV</p></a></li>
+                        <li><a href="#contact"><p>Contact</p></a></li>
+                    </ul>
+                </nav>
+            </nav>
+            <script>
+                const menuButton = document.getElementById("menubutton");
+                const menuList = document.getElementById("menulist");
+                const body = document.getElementById("body");
+
+                menuButton.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    if (menuList.style.display === "flex") {
+                        menuList.style.display = "none";
+                    } else {
+                        menuList.style.display = "flex";
+                    }
+                });
+
+                body.addEventListener("click", function () {
+                    if (menuList.style.display === "flex") {
+                        menuList.style.display = "none";
+                    }
+                });
+            </script>
+            <section id="description">
+                <h2>Programming</h2>
+                <div id="content">
+                    <p>My work in programming was mainly connected with C++, in which I believe have gained most experience. I also have foundations in: PHP, Linux, MySQL, Git, HTML and CSS.</p>
+                    <p>Any work I do in this area I try to put on my <a href="https://github.com/Shrowderetti">GitHub account</a>.
+                </div>
+            </section>
+        </section>
+        <footer>
+            <h2>Contact</h2>
+            <div id="contact">
+                <p>Phone: +48 698 855 029</p>
+                <p>E-mail: koziana.adam@gmail.com </p>
+            </div>
+        </footer>
+    </body>
+</html>

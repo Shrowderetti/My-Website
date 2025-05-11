@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Adam Koziana</title>
+      <link rel="stylesheet" href="main_look.css" type="text/css">
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      <script src="jsex8.js"></script>
+   </head>
+   <body id="body">
+      <header>
+         <h1><a href="index.html">Adam Koziana</a></h1>
+      </header>
+      <nav id="menu">
+         <button id="menubutton">Menu</button>
+         <nav id="menulist">
+            <ul>
+               <li><a href="index.html"><p>Main page</p></a></li>
+               <li><a href="photography.html"><p>Photography</p></a></li>
+               <li><a href="3d.html"><p>3D renders</p></a></li>
+               <li><a href="drawings.html"><p>Drawings</p></a></li>
+               <li><a href="programming.html"><p>Programming</p></a></li>
+               <li><a href="https://www.linkedin.com/in/adamkoziana/" target="_blank"><p>LinkedIn</p></a></li>
+               <li><a href="https://github.com/Shrowderetti" target="_blank"><p>GitHub</p></a></li>
+               <li><a href="https://github.com/Shrowderetti/CV" target="_blank"><p>CV</p></a></li>
+               <li><a href="#contact"><p>Contact</p></a></li>
+            </ul>
+         </nav>
+      </nav>
+      <script>
+         const menuButton = document.getElementById("menubutton");
+         const menuList = document.getElementById("menulist");
+         const body = document.getElementById("body");
+
+         menuButton.addEventListener("click", function (e) {
+            e.stopPropagation();
+            if (menuList.style.display === "flex") {
+               menuList.style.display = "none";
+            } else {
+               menuList.style.display = "flex";
+            }
+         });
+
+         body.addEventListener("click", function () {
+            if (menuList.style.display === "flex") {
+               menuList.style.display = "none";
+            }
+         });
+      </script>
+      <section id="description">
+         <h2>ABOUT ME</h2>
+         <p>Throughout my education, I have picked up many hobbies and explored various ideas for my career path. Here, I try to collect all my thoughts and ideas. Therefore, on this site, you will find my drawings, photos, 3D renders, and programming projects.</p>
+         <p>I've always had an artistic side, which explains my interest in photography and drawing. With these passions in mind, I initially decided to enroll at the University of Warsaw to study Architecture. However, I soon realized that the major wasn't the right fit for me, so I decided to leave the program and search for something more fulfilling.</p>
+         <p>Leaving Architecture allowed me to broaden my perspective and explore fields that had always intrigued me. That’s how I got into 3D design and a bit of programming. With these new interests, I decided to pursue another degree—this time focused on Computer Science, Graphic Design, and Web Development.</p>
+         <p>Now, as I continue my studies, my main interest is definitely 3D art. A true dream come true would be the opportunity to work in Game Development, preferably as a 3D artist. However, any experience in that kind of working environment would be ideal.</p>
+      </section>
+      <section id="projects">
+         <h2>MY WORK</h2>
+         <p class="project_text">Over the years, through both education and personal work, I have created a wide range of artworks that I’m rather proud of. Each piece reflects a part of my growth, curiosity, and passion for the craft, and I’m happy to show it off. </p>
+         <a href="photography.html" class="cars">
+            Photography
+         </a>
+         <a href="3d.html" class="cars">
+            3D renders
+         </a>
+         <a href="drawings.html" class="cars">
+            Drawings
+         </a>
+         <a href="programming.html" class="cars">
+            Programming
+         </a>
+      </section>
+      <footer>
+         <h2>Contact</h2>
+         <div id="contact">
+            <p>Phone: +48 698 855 029</p>
+            <p>E-mail: koziana.adam@gmail.com </p>
+         </div>
+      </footer>
+   </body>
+</html>
