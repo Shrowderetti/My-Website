@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>3D renders</title>
+    <link type="text/css" rel="stylesheet" href="subpages.css">
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="jsex8.js"></script>
+</head>
+<body id="body">
+    <article>
+        <h1><a href="index.html">Adam Koziana</a></h1>
+    </article>
+    <nav id="menu">
+        <button id="menubutton">Menu</button>
+        <nav id="menulist">
+            <ul>
+                <li><a href="index.html"><p>Main page</p></a></li>
+                <li><a href="photography.html"><p>Photography</p></a></li>
+                <li><a href="3d.html"><p>3D renders</p></a></li>
+                <li><a href="drawings.html"><p>Drawings</p></a></li>
+                <li><a href="programming.html"><p>Programming</p></a></li>
+                <li><a href="https://www.linkedin.com/in/adamkoziana/" target="_blank"><p>LinkedIn</p></a></li>
+                <li><a href="https://github.com/Shrowderetti" target="_blank"><p>GitHub</p></a></li>
+                <li><a href="https://github.com/Shrowderetti/CV" target="_blank"><p>CV</p></a></li>
+                <li><a href="#contact"><p>Contact</p></a></li>
+            </ul>
+        </nav>
+    </nav>
+    <script>
+        const menuButton = document.getElementById("menubutton");
+        const menuList = document.getElementById("menulist");
+        const body = document.getElementById("body");
+
+        menuButton.addEventListener("click", function (e) {
+            e.stopPropagation();
+            if (menuList.style.display === "flex") {
+                menuList.style.display = "none";
+            } else {
+                menuList.style.display = "flex";
+            }
+        });
+
+        body.addEventListener("click", function () {
+            if (menuList.style.display === "flex") {
+                menuList.style.display = "none";
+            }
+        });
+    </script>
+    <section id="description">
+        <h2>3D renders</h2>
+        <div id="content">
+            <p>Ever since I discovered my first 3D software as a kid, I fell in love with it. Back then, it was SketchUp, and I used it to create all sorts of models that captured my imagination. Many years later, I discovered Blender—and that love reignited with full force. Blender became a powerful tool for me to express myself and create visually appealing art.</p>
+            <p>Here, I share only my work created in Blender. Although learning this software has been incredibly inspiring, I’m now also exploring Maya and starting to understand the basics of Houdini.</p>
+        </div>
+    </section>
+    <div id="background"></div>
+    <div id="photo_section">
+        <section id="Square">
+            <img src="Photos/3D/Bench.png" class="photoSqu" alt="zdjecie" id="1_2">
+            <img src="Photos/3D/chair.png" class="photoSqu" alt="zdjecie" id="1_3">
+            <img src="Photos/3D/Balls.gif" class="photoSqu" alt="zdjecie" id="1_4">
+            <img src="Photos/3D/Sebs.gif" class="photoSqu" alt="zdjecie" id="1_5">
+            <img src="Photos/3D/Mask.png" class="photoSqu" alt="zdjecie" id="1_6">
+        </section>
+        <section id="Horizontal">
+            <img src="Photos/3D/MM.png" class="photoHor" alt="zdjecie" id="1_7">
+            <img src="Photos/3D/Nest.png" class="photoHor" alt="zdjecie" id="1_8">
+            <!--<img src="Photos/3D/JelloClub.gif" class="photoHor" alt="zdjecie" id="1_9">-->
+            <img src="Photos/3D/Lego.png" class="photoHor" alt="zdjecie" id="1_10">
+            <!--<img src="Photos/3D/RedGoo.gif" class="photoHor" alt="zdjecie" id="1_11">-->
+        </section>
+        <section id="Vertical">
+            <img src="Photos/3D/TheArasakaTower.png" class="photoVer" alt="zdjecie" id="1_12">
+        </section>
+    </div>
+    <div id="photo_indiv">
+        <img src="Photos/3D/Bench.png" class="photo_indi" alt="zdjecie" id="2_2">
+        <img src="Photos/3D/chair.png" class="photo_indi" alt="zdjecie" id="2_3">
+        <img src="Photos/3D/Balls.gif" class="photo_indi" alt="zdjecie" id="2_4">
+        <img src="Photos/3D/Sebs.gif" class="photo_indi" alt="zdjecie" id="2_5">
+        <img src="Photos/3D/Mask.png" class="photo_indi" alt="zdjecie" id="2_6">
+        <img src="Photos/3D/MM.png" class="photo_indi" alt="zdjecie" id="2_7">
+        <img src="Photos/3D/Nest.png" class="photo_indi" alt="zdjecie" id="2_8">
+        <!--<img src="Photos/3D/JelloClub.gif" class="photo_indi" alt="zdjecie" id="2_9">-->
+        <img src="Photos/3D/Lego.png" class="photo_indi" alt="zdjecie" id="2_10">
+        <!--<img src="Photos/3D/RedGoo.gif" class="photo_indi" alt="zdjecie" id="2_11">-->
+        <img src="Photos/3D/TheArasakaTower.png" class="photo_indi_vert" alt="zdjecie" id="2_12">
+    </div>
+    <script>
+        $('.photoSqu').click(function (){
+            $('#background').show();
+        });
+        $('.photoHor').click(function (){
+            $('#background').show();
+        });
+        $('.photoVer').click(function (){
+            $('#background').show();
+        });
+        $('#1_2').click(function (){
+            $('.photo_indi').hide();
+            $('#2_2').toggle();
+        });
+        $('#1_3').click(function (){
+            $('.photo_indi').hide();
+            $('#2_3').toggle();
+        });
+        $('#1_4').click(function (){
+            $('.photo_indi').hide();
+            $('#2_4').toggle();
+        });
+        $('#1_5').click(function (){
+            $('.photo_indi').hide();
+            $('#2_5').toggle();
+        });
+        $('#1_6').click(function (){
+            $('.photo_indi').hide();
+            $('#2_6').toggle();
+        });
+        $('#1_7').click(function (){
+            $('.photo_indi').hide();
+            $('#2_7').toggle();
+        });
+        $('#1_8').click(function (){
+            $('.photo_indi').hide();
+            $('#2_8').toggle();
+        });
+        $('#1_9').click(function (){
+            $('.photo_indi').hide();
+            $('#2_9').toggle();
+        });
+        $('#1_10').click(function (){
+            $('.photo_indi').hide();
+            $('#2_10').toggle();
+        });
+        $('#1_11').click(function (){
+            $('.photo_indi').hide();
+            $('#2_11').toggle();
+        });
+        $('#1_12').click(function (){
+            $('.photo_indi_vert').hide();
+            $('#2_12').toggle();
+        });
+        $('.photo_indi').click(function (){
+            $(this).toggle();
+            $('#background').hide();
+        });
+        $('.photo_indi_vert').click(function (){
+            $(this).toggle();
+            $('#background').hide();
+        });
+        $('#background').click(function (){
+            $(this).hide();
+            $('.photo_indi').hide();
+        });
+        $('#background').click(function (){
+            $(this).hide();
+            $('.photo_indi_vert').hide();
+        });
+    </script>
+    <footer>
+        <h2>Contact</h2>
+        <div id="contact">
+            <p>Phone: +48 698 855 029</p>
+            <p>E-mail: koziana.adam@gmail.com </p>
+        </div>
+    </footer>
+</body>
+</html>
