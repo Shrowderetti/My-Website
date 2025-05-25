@@ -69,6 +69,7 @@
             <!--<img src="Photos/3D/JelloClub.gif" class="photoHor" alt="zdjecie" id="1_9">-->
             <img src="photos/3D/Lego.jpg" class="photoHor" alt="zdjecie" id="1_10">
             <!--<img src="Photos/3D/RedGoo.gif" class="photoHor" alt="zdjecie" id="1_11">-->
+            <img src="photos/3D/Kitchen.png" class="photoHor" alt="zdjecie" id="1_13">
         </section>
         <section id="Vertical">
             <img src="photos/3D/TheArasakaTower.jpg" class="photoVer" alt="zdjecie" id="1_12">
@@ -86,6 +87,7 @@
         <img src="photos/3D/Lego.jpg" class="photo_indi" alt="zdjecie" id="2_10">
         <!--<img src="Photos/3D/RedGoo.gif" class="photo_indi" alt="zdjecie" id="2_11">-->
         <img src="photos/3D/TheArasakaTower.jpg" class="photo_indi_vert" alt="zdjecie" id="2_12">
+        <img src="photos/3D/Kitchen.png" class="photoHor" alt="zdjecie" id="2_13">
     </div>
     <script>
         $('.photoSqu').click(function (){
@@ -140,6 +142,10 @@
         $('#1_12').click(function (){
             $('.photo_indi_vert').hide();
             $('#2_12').toggle();
+        });
+        $('#1_13').click(function (){
+            $('.photo_indi_vert').hide();
+            $('#2_13').toggle();
         });
         $('.photo_indi').click(function (){
             $(this).toggle();
