@@ -224,6 +224,7 @@ footer h2 {
     text-align: center;
     color: #EE964B;
     font-family: Title;
+    padding: 2%;
 }
 
 footer img {
@@ -231,10 +232,23 @@ footer img {
     flex-grow: 1;
 }
 
+#claims {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    font-size: 0.75em;
+    color: #919091;
+    margin-right: 3%;
+    padding: 2%;
+}
+
 #contact {
     display: flex;
     flex-direction: column;
     flex-grow: 2;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 #contact p {
@@ -253,6 +267,28 @@ footer img {
     background: rgba(0,0,0,0.5);
 }
 
+@media all and (max-width: 1000px) {
+    .photoHor{
+        width: 92%;
+        height: auto;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .photo_indi{
+        display: none;
+        position: fixed;
+        width: 95%;
+        height: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: black;
+    }
+}
+
 @media all and (max-width: 600px) {
     .photo_indi{
         display: none;
@@ -265,5 +301,27 @@ footer img {
         bottom: 0;
         margin: auto;
         background: black;
+    }
+    .photo_indi_vert{
+        display: none;
+        position: fixed;
+        width: 92%;
+        height: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: black;
+    }
+    .photoSqu{
+        width: 92%;
+        height: auto;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .photoVer{
+        width: 92%;
     }
 }
