@@ -248,6 +248,17 @@ footer h2 {
 	flex-grow: 2;
 }
 
+#claims {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	font-size: 0.75em;
+	color: #919091;
+	margin-right: 3%;
+	padding: 2%;
+}
+
 #contact p {
 	margin-bottom: 1%;
 	margin-top: 1%;
