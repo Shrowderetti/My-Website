@@ -73,6 +73,7 @@
         </section>
         <section id="Vertical">
             <img src="photos/3D/TheArasakaTower.jpg" class="photoVer" alt="zdjecie" id="1_12">
+            <img src="photos/3D/CocaCola.png" class="photoVer" alt="zdjecie" id="1_14">
         </section>
     </div>
     <div id="photo_indiv">
@@ -88,6 +89,7 @@
         <!--<img src="Photos/3D/RedGoo.gif" class="photo_indi" alt="zdjecie" id="2_11">-->
         <img src="photos/3D/TheArasakaTower.jpg" class="photo_indi_vert3d" alt="zdjecie" id="2_12">
         <img src="photos/3D/Kitchen.png" class="photo_indi" alt="zdjecie" id="2_13">
+        <img src="photos/3D/CocaCola.png" class="photo_indi_vert3d" alt="zdjecie" id="2_14">
     </div>
     <script>
         $('.photoSqu').click(function (){
@@ -146,6 +148,10 @@
         $('#1_13').click(function (){
             $('.photo_indi').hide();
             $('#2_13').toggle();
+        });
+        $('#1_14').click(function (){
+            $('.photo_indi_vert3d').hide();
+            $('#2_14').toggle();
         });
         $('.photo_indi').click(function (){
             $(this).toggle();
