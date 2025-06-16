@@ -196,7 +196,42 @@ article a {
     background: black;
 }
 
+.photo_indi_hor{
+    display: none;
+    position: fixed;
+    height: 90%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: black;
+}
+
+.photo_indi_sqr{
+    display: none;
+    position: fixed;
+    height: 90%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: black;
+}
+
 .photo_indi_vert{
+    display: none;
+    position: fixed;
+    height: 95%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: black;
+}
+.photo_indi_vert3d{
     display: none;
     position: fixed;
     height: 95%;
@@ -267,6 +302,20 @@ footer img {
     background: rgba(0,0,0,0.5);
 }
 
+@media all and (max-width: 1500px) {
+    .photo_indi{
+        width: 98%;
+        height: auto;
+    }
+}
+
+@media all and (max-width: 1250px) {
+    .photo_indi_hor{
+        width: 98%;
+        height: auto;
+    }
+}
+
 @media all and (max-width: 1000px) {
     .photoHor{
         width: 92%;
@@ -287,9 +336,21 @@ footer img {
         margin: auto;
         background: black;
     }
+    .photo_indi_hor{
+        display: none;
+        position: fixed;
+        width: 95%;
+        height: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: black;
+    }
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 680px) {
     .photo_indi{
         display: none;
         position: fixed;
@@ -314,14 +375,42 @@ footer img {
         margin: auto;
         background: black;
     }
+
     .photoSqu{
         width: 92%;
         height: auto;
     }
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 870px) {
+    .photo_indi_sqr{
+        display: none;
+        position: fixed;
+        width: 95%;
+        height: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: black;
+    }
+}
+
+@media all and (max-width: 520px) {
     .photoVer{
         width: 92%;
+    }
+    .photo_indi_vert3d{
+        display: none;
+        position: fixed;
+        width: 92%;
+        height: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: black;
     }
 }

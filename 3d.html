@@ -51,7 +51,7 @@
         <h2>3D renders</h2>
         <div id="content">
             <p>Ever since I discovered my first 3D software as a kid, I fell in love with it. Back then, it was SketchUp, and I used it to create all sorts of models that captured my imagination. Many years later, I discovered Blender—and that love reignited with full force. Blender became a powerful tool for me to express myself and create visually appealing art.</p>
-            <p>Here, I share only my work created in Blender. Although learning this software has been incredibly inspiring, I’m now also exploring Maya and starting to understand the basics of Houdini.</p>
+            <p>Here, I share only my work created in Blender. Although learning this software has been incredibly inspiring, I’m now also exploring Unreal Engine 5 and want to understand the basics of Maya and Houdini.</p>
         </div>
     </section>
     <div id="background"></div>
@@ -76,17 +76,17 @@
         </section>
     </div>
     <div id="photo_indiv">
-        <img src="photos/3D/Bench.jpg" class="photo_indi" alt="zdjecie" id="2_2">
-        <img src="photos/3D/Chair.jpg" class="photo_indi" alt="zdjecie" id="2_3">
-        <img src="photos/3D/Balls.gif" class="photo_indi" alt="zdjecie" id="2_4">
-        <img src="photos/3D/Sebs.gif" class="photo_indi" alt="zdjecie" id="2_5">
-        <img src="photos/3D/Mask.jpg" class="photo_indi" alt="zdjecie" id="2_6">
+        <img src="photos/3D/Bench.jpg" class="photo_indi_sqr" alt="zdjecie" id="2_2">
+        <img src="photos/3D/Chair.jpg" class="photo_indi_sqr" alt="zdjecie" id="2_3">
+        <img src="photos/3D/Balls.gif" class="photo_indi_sqr" alt="zdjecie" id="2_4">
+        <img src="photos/3D/Sebs.gif" class="photo_indi_sqr" alt="zdjecie" id="2_5">
+        <img src="photos/3D/Mask.jpg" class="photo_indi_sqr" alt="zdjecie" id="2_6">
         <img src="photos/3D/MM.png" class="photo_indi" alt="zdjecie" id="2_7">
         <img src="photos/3D/Nest.jpg" class="photo_indi" alt="zdjecie" id="2_8">
         <!--<img src="Photos/3D/JelloClub.gif" class="photo_indi" alt="zdjecie" id="2_9">-->
         <img src="photos/3D/Lego.jpg" class="photo_indi" alt="zdjecie" id="2_10">
         <!--<img src="Photos/3D/RedGoo.gif" class="photo_indi" alt="zdjecie" id="2_11">-->
-        <img src="photos/3D/TheArasakaTower.jpg" class="photo_indi_vert" alt="zdjecie" id="2_12">
+        <img src="photos/3D/TheArasakaTower.jpg" class="photo_indi_vert3d" alt="zdjecie" id="2_12">
         <img src="photos/3D/Kitchen.png" class="photo_indi" alt="zdjecie" id="2_13">
     </div>
     <script>
@@ -100,23 +100,23 @@
             $('#background').show();
         });
         $('#1_2').click(function (){
-            $('.photo_indi').hide();
+            $('.photo_indi_sqr').hide();
             $('#2_2').toggle();
         });
         $('#1_3').click(function (){
-            $('.photo_indi').hide();
+            $('.photo_indi_sqr').hide();
             $('#2_3').toggle();
         });
         $('#1_4').click(function (){
-            $('.photo_indi').hide();
+            $('.photo_indi_sqr').hide();
             $('#2_4').toggle();
         });
         $('#1_5').click(function (){
-            $('.photo_indi').hide();
+            $('.photo_indi_sqr').hide();
             $('#2_5').toggle();
         });
         $('#1_6').click(function (){
-            $('.photo_indi').hide();
+            $('.photo_indi_sqr').hide();
             $('#2_6').toggle();
         });
         $('#1_7').click(function (){
@@ -140,7 +140,7 @@
             $('#2_11').toggle();
         });
         $('#1_12').click(function (){
-            $('.photo_indi_vert').hide();
+            $('.photo_indi_vert3d').hide();
             $('#2_12').toggle();
         });
         $('#1_13').click(function (){
@@ -151,7 +151,11 @@
             $(this).toggle();
             $('#background').hide();
         });
-        $('.photo_indi_vert').click(function (){
+        $('.photo_indi_sqr').click(function (){
+            $(this).toggle();
+            $('#background').hide();
+        });
+        $('.photo_indi_vert3d').click(function (){
             $(this).toggle();
             $('#background').hide();
         });
@@ -161,7 +165,11 @@
         });
         $('#background').click(function (){
             $(this).hide();
-            $('.photo_indi_vert').hide();
+            $('.photo_indi_sqr').hide();
+        });
+        $('#background').click(function (){
+            $(this).hide();
+            $('.photo_indi_vert3d').hide();
         });
     </script>
     <footer>
