@@ -98,7 +98,7 @@ article a {
 }
 
 #menu:hover #menubutton {
-    background-color: #E1E0E1;
+    background-color: #D1D0D1;
     color: #919091;
 }
 
@@ -133,10 +133,33 @@ article a {
     margin-bottom: 40%;
 }
 
+#myBtn {
+
+    height: auto;
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 95px; /* Place the button at the bottom of the page */
+    right: 60px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #EE964B; /* Set a background color */
+    color: #E1E0E1; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 3px;
+}
+
+#myBtn:hover {
+    background-color: #919091; /* Add a dark-grey background on hover */
+}
+
+
 .photoSqu{
     height: 500px;
     width: auto;
     margin: 6% 5% 6%;
+    border-radius: 3px;
     border-top-left-radius: 20px;
 }
 
@@ -144,6 +167,7 @@ article a {
     height: 500px;
     width: auto;
     margin: 6% 3% 6%;
+    border-radius: 3px;
     border-top-left-radius: 20px;
 }
 
@@ -151,6 +175,7 @@ article a {
     width: 400px;
     height: auto;
     margin: 5% 3% 5%;
+    border-radius: 3px;
     border-top-left-radius: 20px;
 }
 
@@ -289,7 +314,10 @@ footer img {
 #contact p {
     margin-bottom: 1%;
     margin-top: 1%;
+    text-decoration: none;
+    color: black;
 }
+
 #background{
     display: none;
     position: fixed;

@@ -8,6 +8,7 @@
       <script src="jsex8.js"></script>
    </head>
    <body id="body">
+      <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="photos/arrow.png" class="photo_use" alt="zdjecie" id="but" width="32"></button>
       <header>
          <h1><a href="index.html">Adam Koziana</a></h1>
       </header>
@@ -46,6 +47,23 @@
                menuList.style.display = "none";
             }
          });
+         // Button:
+         let mybutton = document.getElementById("myBtn");
+
+         window.onscroll = function() {scrollFunction()};
+
+         function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+               mybutton.style.display = "block";
+            } else {
+               mybutton.style.display = "none";
+            }
+         }
+
+         function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+         }
       </script>
       <section id="description">
          <h2>ABOUT ME</h2>

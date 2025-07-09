@@ -8,6 +8,7 @@
     <script src="jsex8.js"></script>
 </head>
 <body id="body">
+<button onclick="topFunction()" id="myBtn" title="Go to top"><img src="photos/arrow.png" class="photo_use" alt="zdjecie" id="but" width="32"></button>
 <article>
     <h1><a href="index.html">Adam Koziana</a></h1>
 </article>
@@ -46,6 +47,23 @@
             menuList.style.display = "none";
         }
     });
+    // Button:
+    let mybutton = document.getElementById("myBtn");
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
 </script>
 <section id="description">
     <h2>Drawings</h2>
@@ -93,9 +111,11 @@
 <script>
     $('.photoHor').click(function (){
         $('#background').show();
+        $('#myBtn').hide();
     });
     $('.photoVer').click(function (){
         $('#background').show();
+        $('#myBtn').hide();
     });
     $('#1_2').click(function (){
         $('.photo_indi_hor').hide();
@@ -184,18 +204,18 @@
     $('.photo_indi_hor').click(function (){
         $(this).toggle();
         $('#background').hide();
+        $('#myBtn').show();
     });
     $('.photo_indi_vert').click(function (){
         $(this).toggle();
         $('#background').hide();
+        $('#myBtn').show();
     });
     $('#background').click(function (){
         $(this).hide();
         $('.photo_indi_hor').hide();
-    });
-    $('#background').click(function (){
-        $(this).hide();
         $('.photo_indi_vert').hide();
+        $('#myBtn').show();
     });
 </script>
 <footer>

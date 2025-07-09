@@ -8,6 +8,7 @@
     <script src="jsex8.js"></script>
 </head>
 <body id="body">
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="photos/arrow.png" class="photo_use" alt="zdjecie" id="but" width="32"></button>
     <article>
         <h1><a href="index.html">Adam Koziana</a></h1>
     </article>
@@ -46,6 +47,23 @@
                 menuList.style.display = "none";
             }
         });
+        // Button:
+        let mybutton = document.getElementById("myBtn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
     </script>
     <section id="description">
         <h2>3D renders</h2>
@@ -94,12 +112,15 @@
     <script>
         $('.photoSqu').click(function (){
             $('#background').show();
+            $('#myBtn').hide();
         });
         $('.photoHor').click(function (){
             $('#background').show();
+            $('#myBtn').hide();
         });
         $('.photoVer').click(function (){
             $('#background').show();
+            $('#myBtn').hide();
         });
         $('#1_2').click(function (){
             $('.photo_indi_sqr').hide();
@@ -156,25 +177,23 @@
         $('.photo_indi').click(function (){
             $(this).toggle();
             $('#background').hide();
+            $('#myBtn').show();
         });
         $('.photo_indi_sqr').click(function (){
             $(this).toggle();
             $('#background').hide();
+            $('#myBtn').show();
         });
         $('.photo_indi_vert3d').click(function (){
             $(this).toggle();
             $('#background').hide();
+            $('#myBtn').show();
         });
         $('#background').click(function (){
             $(this).hide();
+            $('#myBtn').show();
             $('.photo_indi').hide();
-        });
-        $('#background').click(function (){
-            $(this).hide();
             $('.photo_indi_sqr').hide();
-        });
-        $('#background').click(function (){
-            $(this).hide();
             $('.photo_indi_vert3d').hide();
         });
     </script>
