@@ -9,49 +9,38 @@
 }
 
 body {
-	font-family: BodyText;
+	font-family: BodyText, sans-serif; /* Warto dodać fallback font */
 	margin: 0;
+	background-color: #FAFAFA; /* Bardziej neutralne, jasne tło */
+	color: #111111; /* Mocna, elegancka czerń */
 }
 
 header {
 	display: flex;
-	height: 28em;
+	height: 100vh; /* Zajmuje cały ekran */
 	margin: 0;
-	background-image: url("photos/top.png");
-	background-size: 5em;
-	background-repeat: no-repeat;
-	position: static;
+	justify-content: center;
+	align-items: center;
+	/* Usuwamy powtarzające się tło z top.png na rzecz czystości */
 }
 
 header h1 {
-	display: flex;
-	flex-grow: 1;
-	align-self: center;
-	justify-content: center;
-	color: black;
-	height: 20%;
-	margin-top: 7%;
-	font-family: Title;
-	font-size: 3em;
+	font-family: Title, serif;
+	font-size: 5em; /* Znacznie większy tytuł */
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: #111111;
+	margin: 0;
 }
 
 header a {
 	text-decoration: none;
-	color: black;
+	color: inherit;
+	transition: opacity 0.3s ease;
 }
 
-header p {
-	display: flex;
-	flex-direction: column;
-	flex-basis: 30%;
-	color: #E9E7E7;
-	margin: 1%;
-	align-self: center;
-}
-
-header span {
-	margin-bottom: 2%;
-	margin-top: 2%;
+header a:hover {
+	opacity: 0.6; /* Subtelny efekt najechania zamiast zmiany koloru */
 }
 
 #menubutton {
