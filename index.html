@@ -1,103 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <title>Adam Koziana</title>
-      <link rel="stylesheet" href="main_look.css" type="text/css">
-      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-      <script src="jsex8.js"></script>
-   </head>
-   <body id="body">
-      <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="photos/arrow.png" class="photo_use" alt="zdjecie" id="but" width="32"></button>
-      <header>
-         <h1><a href="index.html">Adam Koziana</a></h1>
-      </header>
-      <nav id="menu">
-         <button id="menubutton">Menu</button>
-         <nav id="menulist">
-            <ul>
-               <li><a href="index.html"><p>Main page</p></a></li>
-               <li><a href="photography.html"><p>Photography</p></a></li>
-               <li><a href="3d.html"><p>3D renders</p></a></li>
-               <li><a href="drawings.html"><p>Drawings</p></a></li>
-               <li><a href="programming.html"><p>Programming</p></a></li>
-               <li><a href="https://www.linkedin.com/in/adamkoziana/" target="_blank"><p>LinkedIn</p></a></li>
-               <li><a href="https://www.artstation.com/shrowderetti" target="_blank"><p>ArtStation</p></a></li>
-               <li><a href="https://github.com/Shrowderetti" target="_blank"><p>GitHub</p></a></li>
-               <li><a href="https://github.com/Shrowderetti/CV" target="_blank"><p>CV</p></a></li>
-               <li><a href="#contact"><p>Contact</p></a></li>
-            </ul>
-         </nav>
-      </nav>
-      <script>
-         const menuButton = document.getElementById("menubutton");
-         const menuList = document.getElementById("menulist");
-         const body = document.getElementById("body");
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Adam Koziana | Portfolio</title>
+   <link rel="stylesheet" href="main_look.css" type="text/css">
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+   <script src="jsex8.js" defer></script>
+</head>
+<body id="body">
+<!-- Minimalistyczna górna nawigacja -->
+<nav class="modern-nav">
+   <a href="index.html" class="nav-brand">AK.</a>
+   <button id="menubutton" class="menu-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+   </button>
+</nav>
 
-         menuButton.addEventListener("click", function (e) {
-            e.stopPropagation();
-            if (menuList.style.display === "flex") {
-               menuList.style.display = "none";
-            } else {
-               menuList.style.display = "flex";
-            }
-         });
+<!-- Pełnoekranowe menu ukryte domyślnie -->
+<div id="menulist" class="fullscreen-menu">
+   <div class="menu-content">
+      <ul>
+         <li><a href="index.html">Main page</a></li>
+         <li><a href="photography.html">Photography</a></li>
+         <li><a href="3d.html">3D renders</a></li>
+         <li><a href="drawings.html">Drawings</a></li>
+         <li><a href="programming.html">Programming</a></li>
+         <li class="menu-separator"></li>
+         <li><a href="https://www.linkedin.com/in/adamkoziana/" target="_blank">LinkedIn</a></li>
+         <li><a href="https://www.artstation.com/shrowderetti" target="_blank">ArtStation</a></li>
+         <li><a href="https://github.com/Shrowderetti" target="_blank">GitHub</a></li>
+         <li><a href="https://github.com/Shrowderetti/CV" target="_blank">CV</a></li>
+      </ul>
+   </div>
+</div>
 
-         body.addEventListener("click", function () {
-            if (menuList.style.display === "flex") {
-               menuList.style.display = "none";
-            }
-         });
-         // Button:
-         let mybutton = document.getElementById("myBtn");
+<header class="hero-section">
+   <div class="hero-content">
+      <h1 class="hero-title">Adam Koziana</h1>
+      <p class="hero-subtitle">3D Artist</p>
+   </div>
+   <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="line"></div>
+   </div>
+</header>
 
-         window.onscroll = function() {scrollFunction()};
-
-         function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-               mybutton.style.display = "block";
-            } else {
-               mybutton.style.display = "none";
-            }
-         }
-
-         function topFunction() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-         }
-      </script>
-      <section id="description">
-         <h2>ABOUT ME</h2>
-         <p>Throughout my education, I have picked up many hobbies and explored various ideas for my career path. Here, I try to collect all my thoughts and ideas. Therefore, on this site, you will find my drawings, photos, 3D renders, and programming projects.</p>
-         <p>I've always had an artistic side, which explains my interest in photography and drawing. With these passions in mind, I initially decided to enroll at the University of Warsaw to study Architecture. However, I soon realized that the major wasn't the right fit for me, so I decided to leave the program and search for something more fulfilling.</p>
-         <p>Leaving Architecture allowed me to broaden my perspective and explore fields that had always intrigued me. That’s how I got into 3D design and a bit of programming. With these new interests, I decided to pursue another degree—this time focused on Computer Science, Graphic Design, and Web Development.</p>
-         <p>Now, as I continue my studies, my main interest is definitely 3D art. A true dream come true would be the opportunity to work in Game Development, preferably as a 3D artist. However, any experience in that kind of working environment would be ideal.</p>
-      </section>
-      <section id="projects">
-         <h2>MY WORK</h2>
-         <p class="project_text">Over the years, through both education and personal work, I have created a wide range of artworks that I’m rather proud of. Each piece reflects a part of my growth, curiosity, and passion for the craft, and I’m happy to show it off. </p>
-         <a href="photography.html" class="cars">
-            Photography
-         </a>
-         <a href="3d.html" class="cars">
-            3D renders
-         </a>
-         <a href="drawings.html" class="cars">
-            Drawings
-         </a>
-         <a href="programming.html" class="cars">
-            Programming
-         </a>
-      </section>
-      <footer>
-         <h2>Contact</h2>
-         <div id="contact">
-            <p>Phone: +48 698 855 029</p>
-            <p>E-mail: koziana.adam@gmail.com </p>
+<main>
+   <section id="about" class="about-section">
+      <div class="about-grid">
+         <h2 class="section-title">About Me</h2>
+         <div class="about-text">
+            <p>Throughout my education, I have explored various ideas for my career path. I've always had an artistic side, which initially drove my interest in drawing, photography, and capturing the architecture around me.</p>
+            <p>With these passions in mind, I began studying Architecture at the Warsaw University of Technology. However, I soon realized that my true drive lay in the broader spectrum of digital creation. This shift in perspective led me to transition into Electronic Information Processing at the Jagiellonian University, allowing me to dive deep into computer graphics, programming, and data processing.</p>
+            <p>Currently, my main focus and absolute passion is 3D art. My goal is to work in Game Development as a 3D artist, though I am eager to embrace any experience in a creative, technical environment. Here you will find a collection of my drawings, photos, 3D renders, and programming projects.</p>
          </div>
-         <div id="claims">
-            <p>@ 2026 Portfolio Adam Koziana. Wszelkie prawa zastrzeżone.</p>
-         </div>
-      </footer>
-   </body>
+      </div>
+   </section>
+
+   <section id="projects" class="work-section">
+      <h2 class="section-title">Selected Work</h2>
+      <div class="work-links">
+         <a href="3d.html" class="work-item">
+            <span class="work-number">01</span>
+            <span class="work-name">3D Renders</span>
+         </a>
+         <a href="photography.html" class="work-item">
+            <span class="work-number">02</span>
+            <span class="work-name">Photography</span>
+         </a>
+         <a href="drawings.html" class="work-item">
+            <span class="work-number">03</span>
+            <span class="work-name">Drawings</span>
+         </a>
+         <a href="programming.html" class="work-item">
+            <span class="work-number">04</span>
+            <span class="work-name">Programming</span>
+         </a>
+      </div>
+   </section>
+</main>
+
+<footer class="modern-footer">
+   <div class="footer-content">
+      <div class="contact-info">
+         <h2>Let's talk</h2>
+         <a href="mailto:koziana.adam@gmail.com" class="email-link">koziana.adam@gmail.com</a>
+         <p>+48 698 855 029</p>
+      </div>
+   </div>
+   <div class="copyright">
+      <p>&copy; 2026 Portfolio Adam Koziana. Wszelkie prawa zastrzeżone.</p>
+   </div>
+</footer>
+
+<script>
+   const menuBtn = document.getElementById('menubutton');
+   const menuList = document.getElementById('menulist');
+   const navBar = document.querySelector('.modern-nav');
+   let isMenuOpen = false;
+
+   // Obsługa otwierania i zamykania menu
+   menuBtn.addEventListener('click', () => {
+      isMenuOpen = !isMenuOpen;
+      if (isMenuOpen) {
+         menuList.style.display = 'flex';
+         // Dodajemy klasę uruchamiającą animację w "X"
+         menuBtn.classList.add('open');
+
+         navBar.classList.remove('nav-scrolled');
+         navBar.style.color = '#FAFAFA';
+      } else {
+         menuList.style.display = 'none';
+         // Zabieramy klasę, wracamy do "burgera"
+         menuBtn.classList.remove('open');
+         navBar.style.color = '';
+
+         if (window.scrollY > 50) {
+            navBar.classList.add('nav-scrolled');
+         }
+      }
+   });
+
+   // Obsługa zmiany wyglądu paska podczas przewijania strony
+   window.addEventListener('scroll', () => {
+      if (window.scrollY > 50 && !isMenuOpen) {
+         navBar.classList.add('nav-scrolled');
+      } else if (window.scrollY <= 50 && !isMenuOpen) {
+         navBar.classList.remove('nav-scrolled');
+      }
+   });
+</script>
+</body>
 </html>

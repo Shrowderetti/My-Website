@@ -1,311 +1,332 @@
 @font-face {
-	font-family: Title;
+	font-family: 'Title';
 	src: url("photos/Title.ttf");
 }
 
 @font-face {
-	font-family: BodyText;
+	font-family: 'BodyText';
 	src: url("photos/BodyText.ttf");
 }
 
+:root {
+	--bg-color: #FAFAFA;
+	--text-color: #111111;
+	--accent-color: #555555;
+}
+
+* {
+	box-sizing: border-box;
+}
+
 body {
-	font-family: BodyText, sans-serif; /* Warto dodać fallback font */
+	font-family: 'BodyText', sans-serif;
 	margin: 0;
-	background-color: #FAFAFA; /* Bardziej neutralne, jasne tło */
-	color: #111111; /* Mocna, elegancka czerń */
+	padding: 0;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	line-height: 1.6;
 }
 
-header {
+/* --- NAWIGACJA --- */
+.modern-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 2em 4em;
 	display: flex;
-	height: 100vh; /* Zajmuje cały ekran */
-	margin: 0;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
-	/* Usuwamy powtarzające się tło z top.png na rzecz czystości */
+	z-index: 100;
+	color: #FAFAFA; /* Biały tekst na tle zdjęcia powitalnego */
+	background-color: transparent;
+	transition: background-color 0.4s ease, color 0.4s ease, padding 0.4s ease;
 }
 
-header h1 {
-	font-family: Title, serif;
-	font-size: 5em; /* Znacznie większy tytuł */
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
+.nav-scrolled {
+	background-color: rgba(250, 250, 250, 0.96);
 	color: #111111;
-	margin: 0;
+	padding: 1em 4em;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-header a {
+.nav-brand {
+	font-family: 'Title', serif;
+	font-size: 1.5em;
 	text-decoration: none;
 	color: inherit;
+	font-weight: bold;
+}
+
+/* --- HAMBURGER MENU --- */
+.menu-toggle {
+	background: none;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 6px;
+	/* Zwiększamy niewidzialny kontener, dając "ikonie X" miejsce na obrót */
+	width: 44px;
+	height: 44px;
+	padding: 0;
+	z-index: 101;
+	color: inherit;
+	/* Gwarantuje, że krawędzie przycisku nie utną rotujących elementów */
+	overflow: visible;
+}
+
+/* Wygląd pojedynczej kreski pozostaje bez zmian (małe, zaokrąglone) */
+.menu-toggle .bar {
+	width: 24px;
+	height: 2px;
+	background-color: currentColor;
+	border-radius: 3px;
+	margin: 0;
+	transition: all 0.4s ease;
+}
+
+/* --- ANIMACJA W KRZYŻYK "X" --- */
+.menu-toggle.open .bar:nth-child(1) {
+	transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+	opacity: 0;
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+	transform: translateY(-8px) rotate(-45deg);
+}
+
+/* --- PEŁNOEKRANOWE MENU --- */
+.fullscreen-menu {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--text-color);
+	color: var(--bg-color);
+	z-index: 90;
+	justify-content: center;
+	align-items: flex-start;
+	padding-top: 10vh;
+	padding-bottom: 5vh;
+	overflow-y: auto;
+}
+
+.menu-content ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+.menu-content li {
+	margin: 1.5vh 0;
+}
+
+.menu-content a {
+	font-family: 'Title', serif;
+	font-size: clamp(1.5em, 4vh, 2.5em);
+	color: var(--bg-color);
+	text-decoration: none;
 	transition: opacity 0.3s ease;
 }
 
-header a:hover {
-	opacity: 0.6; /* Subtelny efekt najechania zamiast zmiany koloru */
+.menu-separator {
+	height: 1px;
+	background-color: #333;
+	margin: 2vh auto;
+	width: 50%;
 }
 
-#menubutton {
-	background-color: #E1E0E1;
-	color: #EE964B;
-	width: 100%;
-	height: 60px;
-	border: none;
-	font-family: Title;
-	font-weight: bold;
-	font-size: 20px;
+.menu-content a:hover {
+	opacity: 0.5;
 }
 
-#menu {
-	display: inline-block;
-	width: 100%;
+
+/* --- HERO SECTION Z TŁEM ZDJĘCIOWYM --- */
+.hero-section {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0 4em;
+	position: relative;
+
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('photos/3D/Kitchen.png');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+
+	color: #FAFAFA;
+}
+
+.hero-content {
+	text-align: center;
+	z-index: 2;
+}
+
+.hero-title {
+	font-family: 'Title', serif;
+	font-size: clamp(4em, 10vw, 8em);
 	margin: 0;
+	line-height: 1;
+	text-transform: uppercase;
+	letter-spacing: -0.02em;
+	color: #FAFAFA;
 }
 
-#menulist {
-	display: none;
+.hero-subtitle {
+	font-size: 1.2em;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	color: #CCCCCC;
+	margin-top: 1em;
+}
+
+.scroll-indicator {
 	position: absolute;
-	background-color: #E9E7E7;
-	margin: 0;
+	bottom: 3em;
+	display: flex;
 	flex-direction: column;
-	width: 100%;
-	height: auto;
-}
-
-#menulist a {
-	text-align: center;
-	margin: 0;
-	padding: 0;
-	color: black;
-	text-decoration: none;
-	width: 100%;
-}
-
-#menulist li {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	text-align: center;
-	width: 100%;
-}
-
-#menulist ul {
-	margin: 0;
-	padding: 0;
-	height: auto;
-	width: 100%;
-}
-
-#menulist p{
-	margin: 0;
-	padding-bottom: 12px;
-	padding-top: 12px;
-}
-
-#menulist a:hover {
-	color: #EE964B;
-}
-
-#menu:hover #menubutton {
-	background-color: #D1D0D1;
-	color: #919091;
-}
-
-#description {
-	display: flex;
-	background-color: #E9E7E7;
-	flex-wrap: nowrap;
 	align-items: center;
+	gap: 1em;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: #FAFAFA;
 }
 
-#description h2 {
-	display: flex;
-	font-size: 2em;
-	font-family: Title;
-	flex-basis: 25%;
-	margin-left: 2%;
-	margin-right: 2%;
-	margin-bottom: 5%;
-	color: #EE964B;
+.scroll-indicator .line {
+	width: 1px;
+	height: 50px;
+	background-color: #FAFAFA;
 }
 
-#description p {
-	display: flex;
-	align-self: flex-start;
+/* --- SEKCJE OGÓLNE --- */
+.about-section, .work-section {
+	padding: 8em 4em;
+}
+
+.section-title {
+	font-family: 'Title', serif;
+	font-size: 3em;
+	margin-top: 0;
+	margin-bottom: 1em;
+	border-bottom: 2px solid var(--text-color);
+	padding-bottom: 0.2em;
+}
+
+/* --- ABOUT --- */
+.about-grid {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.about-text {
+	column-count: 2;
+	column-gap: 4em;
+	font-size: 1.1em;
 	text-align: justify;
-	flex-basis: 60%;
-	margin-top: 7em;
-	margin-bottom: 5em;
-	margin-left: 5%;
-	margin-right: 2%;
 }
 
-main {
-	display: flex;
-	background-color: #E9E7E7;
-	padding-top: 2%;
-	padding-bottom: 2%;
+.about-text p {
+	margin-top: 0;
+	margin-bottom: 1.5em;
 }
 
-#projects {
+/* --- WORK SECTION --- */
+.work-links {
 	display: flex;
 	flex-direction: column;
-	padding-right: 1%;
-	padding-left: 1%;
-	padding-top: 5%;
-	background-image: url("photos/mid.png");
-	background-size: 5em;
-	background-repeat: no-repeat;
-	background-position: top;
-	background-position-x: right;
-	position: static;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
-#projects h2 {
-	font-weight: bold;
-	margin-left: 4%;
-	font-size: 2em;
-	font-family: Title;
-}
-
-.project_text {
-	margin-top: 4%;
-	margin-bottom: 9%;
-	margin-left: 7%;
-	margin-right: 4%;
-}
-
-.cars {
+.work-item {
 	display: flex;
-	flex-direction: column;
-	width: 90%;
-	margin-top: 3%;
-	align-items: center;
-	align-self: center;
-	background-color: #E9E7E7;
-	margin-bottom: 3%;
+	align-items: baseline;
+	padding: 2em 0;
+	border-bottom: 1px solid #ddd;
 	text-decoration: none;
-	color: #EE964B;
-	padding-top: 3%;
-	padding-bottom: 3%;
-	font-family: Title;
+	color: var(--text-color);
+	transition: padding-left 0.4s ease, background-color 0.4s ease;
+}
+
+.work-number {
 	font-size: 1.5em;
-	border-radius: 3px;
+	margin-right: 2em;
+	color: var(--accent-color);
 }
 
-.cars h3 {
-	font-weight: bold;
-	margin-bottom: 3%;
-	margin-top: 3%;
-	font-family: Title;
+.work-name {
+	font-family: 'Title', serif;
+	font-size: 4em;
+	text-transform: uppercase;
 }
 
-.cars a {
-	color: #EE964B;
-	text-decoration: none;
+.work-item:hover {
+	padding-left: 2em;
 }
 
-.cars:hover{
-	color: #919091;
-	background-color: #D1D0D1;
+/* --- FOOTER --- */
+.modern-footer {
+	background-color: var(--text-color);
+	color: var(--bg-color);
+	padding: 6em 4em 2em;
 }
 
-ul li {
-	font-size: 16px;
-	margin-bottom: 6%;
-	margin-top: 6%;
-}
-
-footer {
+.footer-content {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	background-color: #E1E0E1;
-	height: 10em;
-	align-items: center;
-	margin-top: 8%;
+	justify-content: space-between;
+	align-items: flex-start;
+	max-width: 1200px;
+	margin: 0 auto 4em;
 }
 
-footer h2 {
-	flex-grow: 1;
+.contact-info h2 {
+	font-family: 'Title', serif;
+	font-size: 3em;
+	margin: 0 0 0.5em 0;
+}
+
+.email-link {
 	font-size: 2em;
+	color: var(--bg-color);
+	text-decoration: none;
+	border-bottom: 1px solid var(--bg-color);
+}
+
+.copyright {
 	text-align: center;
-	color: #EE964B;
-	font-family: Title;
+	color: #888;
+	font-size: 0.9em;
+	border-top: 1px solid #333;
+	padding-top: 2em;
 }
 
-#contact {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	flex-grow: 2;
-}
-
-#contact p{
-	text-decoration: none;
-	color: black;
-}
-
-#claims {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	align-items: flex-end;
-	font-size: 0.75em;
-	color: #919091;
-	margin-right: 3%;
-	padding: 2%;
-}
-
-#myBtn {
-
-	height: auto;
-	display: none; /* Hidden by default */
-	position: fixed; /* Fixed/sticky position */
-	bottom: 95px; /* Place the button at the bottom of the page */
-	right: 60px; /* Place the button 30px from the right */
-	z-index: 99; /* Make sure it does not overlap */
-	border: none; /* Remove borders */
-	outline: none; /* Remove outline */
-	background-color: #EE964B; /* Set a background color */
-	color: #E1E0E1; /* Text color */
-	cursor: pointer; /* Add a mouse pointer on hover */
-	padding: 15px; /* Some padding */
-	border-radius: 3px;
-}
-
-#myBtn:hover {
-	background-color: #919091; /* Add a dark-grey background on hover */
-}
-
-#contact p {
-	margin-bottom: 1%;
-	margin-top: 1%;
-	text-decoration: none;
-	color: black;
-}
-
-@media all and (max-width: 900px) {
-	#description {
-		display: flex;
-		flex-direction: column;
-		background-color: #E9E7E7;
-		flex-wrap: nowrap;
-		align-items: center;
-		padding-bottom: 8%;
-		padding-top: 5%;
+@media (max-width: 900px) {
+	.about-text {
+		column-count: 1;
 	}
 
-	#description h2 {
-		display: flex;
-		align-self: flex-end;
-		font-family: Title;
-		flex-basis: 25%;
-		margin: 6% 11% 6% 2%;
-		color: #EE964B;
+	.work-name {
+		font-size: 2.5em;
 	}
 
-	#description p {
-		display: flex;
-		flex-basis: 60%;
-		margin: 3% 8% 6%;
+	.hero-title {
+		font-size: 3.5em;
+	}
+
+	.modern-nav, .about-section, .work-section, .modern-footer {
+		padding-left: 2em;
+		padding-right: 2em;
 	}
 }
