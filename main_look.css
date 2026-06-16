@@ -243,11 +243,14 @@ body {
 }
 
 /* --- WORK SECTION --- */
+.work-container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
 .work-links {
 	display: flex;
 	flex-direction: column;
-	max-width: 1200px;
-	margin: 0 auto;
 }
 
 .work-item {
@@ -268,7 +271,7 @@ body {
 
 .work-name {
 	font-family: 'Title', serif;
-	font-size: 4em;
+	font-size: 3em;
 	text-transform: uppercase;
 }
 
@@ -277,39 +280,52 @@ body {
 }
 
 /* --- FOOTER --- */
-.modern-footer {
-	background-color: var(--text-color);
-	color: var(--bg-color);
-	padding: 6em 4em 2em;
-}
-
-.footer-content {
+.minimal-footer {
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-start;
-	max-width: 1200px;
-	margin: 0 auto 4em;
+	align-items: center;
+	padding: 2em 4em;
+	background-color: #FAFAFA;
+	color: #111111;
+	border-top: 1px solid #EEEEEE;
+	box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
+	z-index: 10;
 }
 
-.contact-info h2 {
+.footer-label {
 	font-family: 'Title', serif;
-	font-size: 3em;
-	margin: 0 0 0.5em 0;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	margin: 0 0 1em 0;
+	color: #111111;
+	padding-bottom: 0.5em;
+	border-bottom: 1px solid #DDDDDD;
+	display: inline-block;
 }
 
-.email-link {
-	font-size: 2em;
-	color: var(--bg-color);
+.contact-details {
+	margin-top: 0.5em;
+}
+
+.contact-details p {
+	margin: 0.5em 0;
+	font-size: 1.1em;
+}
+
+.contact-details span {
+	color: #111111;
+	margin-right: 0.5em;
+}
+
+.contact-details a {
+	color: #111111;
 	text-decoration: none;
-	border-bottom: 1px solid var(--bg-color);
 }
 
-.copyright {
-	text-align: center;
-	color: #888;
-	font-size: 0.9em;
-	border-top: 1px solid #333;
-	padding-top: 2em;
+.footer-right {
+	font-size: 0.8em;
+	color: #999999;
 }
 
 @media (max-width: 900px) {
@@ -325,8 +341,33 @@ body {
 		font-size: 3.5em;
 	}
 
-	.modern-nav, .about-section, .work-section, .modern-footer {
-		padding-left: 2em;
-		padding-right: 2em;
+	.minimal-footer-dark {
+		flex-direction: column;
+		align-items: center;
+		gap: 3em;
+		padding: 3em 2em;
+		text-align: center;
+	}
+
+	.footer-label {
+		border-bottom: none; /* Na telefonie możemy zrezygnować z linii dla czystości */
+	}
+
+	.work-item {
+		padding: 1.5em 0; /* Zmniejszamy pionowy padding */
+	}
+
+	.work-name {
+		font-size: 1.8em; /* Zmniejszamy font na bardzo małe ekrany */
+		word-break: break-word; /* Pozwala na zawinięcie długich nazw wierszy */
+	}
+
+	.work-number {
+		font-size: 1em;
+		margin-right: 1em; /* Zmniejszamy odstęp między numerem a nazwą */
+	}
+
+	.work-item:hover {
+		padding-left: 0.5em; /* Zmniejszamy "wjazd" tekstu przy hoverze, by nie powodował scrolla */
 	}
 }

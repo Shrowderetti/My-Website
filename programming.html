@@ -1,89 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Programming</title>
-        <link type="text/css" rel="stylesheet" href="subpages.css">
-        <meta charset="UTF-8">
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <script src="jsex8.js"></script>
-    </head>
-    <body id="body">
-        <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="photos/arrow.png" class="photo_use" alt="zdjecie" id="but" width="32"></button>
-        <section id="Base">
-            <article>
-                <h1><a href="index.html">Adam Koziana</a></h1>
-            </article>
-            <nav id="menu">
-                <button id="menubutton">Menu</button>
-                <nav id="menulist">
-                    <ul>
-                        <li><a href="index.html"><p>Main page</p></a></li>
-                        <li><a href="photography.html"><p>Photography</p></a></li>
-                        <li><a href="3d.html"><p>3D renders</p></a></li>
-                        <li><a href="drawings.html"><p>Drawings</p></a></li>
-                        <li><a href="programming.html"><p>Programming</p></a></li>
-                        <li><a href="https://www.linkedin.com/in/adamkoziana/" target="_blank"><p>LinkedIn</p></a></li>
-                        <li><a href="https://www.artstation.com/shrowderetti" target="_blank"><p>ArtStation</p></a></li>
-                        <li><a href="https://github.com/Shrowderetti" target="_blank"><p>GitHub</p></a></li>
-                        <li><a href="https://github.com/Shrowderetti/CV" target="_blank"><p>CV</p></a></li>
-                        <li><a href="#contact"><p>Contact</p></a></li>
-                    </ul>
-                </nav>
-            </nav>
-            <script>
-                const menuButton = document.getElementById("menubutton");
-                const menuList = document.getElementById("menulist");
-                const body = document.getElementById("body");
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming | Adam Koziana</title>
+    <link rel="stylesheet" href="main_look.css">
+    <link rel="stylesheet" href="subpages.css">
+</head>
+<body id="body">
 
-                menuButton.addEventListener("click", function (e) {
-                    e.stopPropagation();
-                    if (menuList.style.display === "flex") {
-                        menuList.style.display = "none";
-                    } else {
-                        menuList.style.display = "flex";
-                    }
-                });
+<nav class="modern-nav nav-scrolled">
+    <a href="index.html" class="nav-brand">AK.</a>
+    <button id="menubutton" class="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+</nav>
 
-                body.addEventListener("click", function () {
-                    if (menuList.style.display === "flex") {
-                        menuList.style.display = "none";
-                    }
-                });
-                // Button:
-                let mybutton = document.getElementById("myBtn");
+<div id="menulist" class="fullscreen-menu">
+    <div class="menu-content">
+        <ul>
+            <li><a href="index.html">Main page</a></li>
+            <li><a href="photography.html">Photography</a></li>
+            <li><a href="3d.html">3D renders</a></li>
+            <li><a href="drawings.html">Drawings</a></li>
+            <li><a href="programming.html">Programming</a></li>
+            <li class="menu-separator"></li>
+            <li><a href="https://www.linkedin.com/in/adamkoziana/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.artstation.com/shrowderetti" target="_blank">ArtStation</a></li>
+            <li><a href="https://github.com/Shrowderetti" target="_blank">GitHub</a></li>
+        </ul>
+    </div>
+</div>
 
-                window.onscroll = function() {scrollFunction()};
+<main class="page-content">
+    <div class="page-header">
+        <h1 class="page-title">Programming</h1>
+        <div class="page-description">
+            <p>My work in programming is mainly connected with C++ and Python, in which I believe I have gained the most experience. I also have a solid foundation in PHP, Linux, MySQL, Git, HTML, CSS and some in JS.</p>
+            <p>All the projects and source code I work on are regularly documented and published on my GitHub profile.</p>
 
-                function scrollFunction() {
-                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                        mybutton.style.display = "block";
-                    } else {
-                        mybutton.style.display = "none";
-                    }
-                }
+            <br>
+            <a href="https://github.com/Shrowderetti" target="_blank" style="font-family: 'Title', serif; font-size: 1.5em; color: #111; text-decoration: none; border-bottom: 2px solid #111; padding-bottom: 0.2em; display: inline-block; transition: opacity 0.3s ease; margin-top: 1em;">
+                Visit my GitHub &rarr;
+            </a>
+        </div>
+    </div>
 
-                function topFunction() {
-                    document.body.scrollTop = 0; // For Safari
-                    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-                }
-            </script>
-            <section id="description">
-                <h2>Programming</h2>
-                <div id="content">
-                    <p>My work in programming was mainly connected with C++, in which I believe have gained most experience. I also have foundations in: PHP, Linux, MySQL, Git, HTML and CSS.</p>
-                    <p>Any work I do in this area I try to put on my <a href="https://github.com/Shrowderetti">GitHub account</a>.
-                </div>
-            </section>
-        </section>
-        <footer>
-            <h2>Contact</h2>
-            <div id="contact">
-                <p>Phone: +48 698 855 029</p>
-                <p>E-mail: koziana.adam@gmail.com </p>
-            </div>
-            <div id="claims">
-                <p>@ 2026 Portfolio Adam Koziana. Wszelkie prawa zastrzeżone.</p>
-            </div>
-        </footer>
-    </body>
+    <div class="gallery-grid">
+    </div>
+</main>
+
+<footer class="minimal-footer">
+    <div class="footer-left">
+        <h3 class="footer-label">Get in touch</h3>
+        <div class="contact-details">
+            <p><span>Email:</span> <a href="mailto:koziana.adam@gmail.com">koziana.adam@gmail.com</a></p>
+            <p><span>Phone:</span> +48 698 855 029</p>
+        </div>
+    </div>
+    <div class="footer-right">
+        <p>&copy; 2026 Adam Koziana. All rights reserved.</p>
+    </div>
+</footer>
+
+<div id="lightbox" class="lightbox">
+    <img class="lightbox-content" id="lightbox-img" alt="Powiększone zdjęcie">
+</div>
+
+<script>
+    const menuBtn = document.getElementById('menubutton');
+    const menuList = document.getElementById('menulist');
+    const navBar = document.querySelector('.modern-nav');
+    let isMenuOpen = false;
+
+    // 1. OBSŁUGA MENU I ZMIANY KOLORU PASKA
+    menuBtn.addEventListener('click', () => {
+        isMenuOpen = !isMenuOpen;
+        if (isMenuOpen) {
+            menuList.style.display = 'flex';
+            menuBtn.classList.add('open');
+            navBar.classList.remove('nav-scrolled');
+            navBar.style.color = '#FAFAFA';
+        } else {
+            menuList.style.display = 'none';
+            menuBtn.classList.remove('open');
+            navBar.classList.add('nav-scrolled');
+            navBar.style.color = '';
+        }
+    });
+
+    // 2. OBSŁUGA POWIĘKSZANIA ZDJĘĆ (Lightbox)
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const galleryImages = document.querySelectorAll('.gallery-item img');
+
+    // Otwieranie zdjęcia
+    galleryImages.forEach(img => {
+        img.addEventListener('click', () => {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
+        });
+    });
+
+    // Zamykanie powiększenia po kliknięciu gdziekolwiek
+    lightbox.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+</script>
+</body>
 </html>

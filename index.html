@@ -24,8 +24,8 @@
    <div class="menu-content">
       <ul>
          <li><a href="index.html">Main page</a></li>
-         <li><a href="photography.html">Photography</a></li>
          <li><a href="3d.html">3D renders</a></li>
+         <li><a href="photography.html">Photography</a></li>
          <li><a href="drawings.html">Drawings</a></li>
          <li><a href="programming.html">Programming</a></li>
          <li class="menu-separator"></li>
@@ -54,45 +54,47 @@
          <h2 class="section-title">About Me</h2>
          <div class="about-text">
             <p>Throughout my education, I have explored various ideas for my career path. I've always had an artistic side, which initially drove my interest in drawing, photography, and capturing the architecture around me.</p>
-            <p>With these passions in mind, I began studying Architecture at the Warsaw University of Technology. However, I soon realized that my true drive lay in the broader spectrum of digital creation. This shift in perspective led me to transition into Electronic Information Processing at the Jagiellonian University, allowing me to dive deep into computer graphics, programming, and data processing.</p>
-            <p>Currently, my main focus and absolute passion is 3D art. My goal is to work in Game Development as a 3D artist, though I am eager to embrace any experience in a creative, technical environment. Here you will find a collection of my drawings, photos, 3D renders, and programming projects.</p>
+            <p>With these passions in mind, I began studying Architecture at the Warsaw University of Technology. However, I soon realized that my true drive lay in spectrum of digital creation. This shift in perspective led me to getting a degree in Electronic Information Processing at the Jagiellonian University, allowing me to dive deep into computer graphics, programming, and data processing.</p>
+            <p>Currently, my main focus and absolute passion is 3D art. My goal is to work in Game Development preferably as a 3D environmental artist, though I am eager to embrace any experience in a such creative, technical environment. Here you will find a collection of my drawings, photos, 3D renders, and programming projects.</p>
          </div>
       </div>
    </section>
 
    <section id="projects" class="work-section">
-      <h2 class="section-title">Selected Work</h2>
-      <div class="work-links">
-         <a href="3d.html" class="work-item">
-            <span class="work-number">01</span>
-            <span class="work-name">3D Renders</span>
-         </a>
-         <a href="photography.html" class="work-item">
-            <span class="work-number">02</span>
-            <span class="work-name">Photography</span>
-         </a>
-         <a href="drawings.html" class="work-item">
-            <span class="work-number">03</span>
-            <span class="work-name">Drawings</span>
-         </a>
-         <a href="programming.html" class="work-item">
-            <span class="work-number">04</span>
-            <span class="work-name">Programming</span>
-         </a>
+      <div class="work-container">
+         <h2 class="section-title">Selected Work</h2>
+         <div class="work-links">
+            <a href="3d.html" class="work-item">
+               <span class="work-number">01</span>
+               <span class="work-name">3D Renders</span>
+            </a>
+            <a href="photography.html" class="work-item">
+               <span class="work-number">02</span>
+               <span class="work-name">Photography</span>
+            </a>
+            <a href="drawings.html" class="work-item">
+               <span class="work-number">03</span>
+               <span class="work-name">Drawings</span>
+            </a>
+            <a href="programming.html" class="work-item">
+               <span class="work-number">04</span>
+               <span class="work-name">Programming</span>
+            </a>
+         </div>
       </div>
    </section>
 </main>
 
-<footer class="modern-footer">
-   <div class="footer-content">
-      <div class="contact-info">
-         <h2>Let's talk</h2>
-         <a href="mailto:koziana.adam@gmail.com" class="email-link">koziana.adam@gmail.com</a>
-         <p>+48 698 855 029</p>
+<footer class="minimal-footer">
+   <div class="footer-left">
+      <h3 class="footer-label">Get in touch</h3>
+      <div class="contact-details">
+         <p><span>Email:</span> <a href="mailto:koziana.adam@gmail.com">koziana.adam@gmail.com</a></p>
+         <p><span>Phone:</span> +48 698 855 029</p>
       </div>
    </div>
-   <div class="copyright">
-      <p>&copy; 2026 Portfolio Adam Koziana. Wszelkie prawa zastrzeżone.</p>
+   <div class="footer-right">
+      <p>&copy; 2026 Adam Koziana. All rights reserved.</p>
    </div>
 </footer>
 
@@ -126,9 +128,9 @@
 
    // Obsługa zmiany wyglądu paska podczas przewijania strony
    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50 && !isMenuOpen) {
+      if (window.scrollY > 820 && !isMenuOpen) {
          navBar.classList.add('nav-scrolled');
-      } else if (window.scrollY <= 50 && !isMenuOpen) {
+      } else if (window.scrollY <= 830 && !isMenuOpen) {
          navBar.classList.remove('nav-scrolled');
       }
    });

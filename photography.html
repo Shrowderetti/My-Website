@@ -1,251 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Photography</title>
-        <link type="text/css" rel="stylesheet" href="subpages.css">
-        <meta charset="UTF-8">
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <script src="jsex8.js"></script>
-    </head>
-    <body id="body">
-        <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="photos/arrow.png" class="photo_use" alt="zdjecie" id="but" width="32"></button>
-        <article>
-            <h1><a href="index.html">Adam Koziana</a></h1>
-        </article>
-        <nav id="menu">
-            <button id="menubutton">Menu</button>
-            <nav id="menulist">
-                <ul>
-                    <li><a href="index.html"><p>Main page</p></a></li>
-                    <li><a href="photography.html"><p>Photography</p></a></li>
-                    <li><a href="3d.html"><p>3D renders</p></a></li>
-                    <li><a href="drawings.html"><p>Drawings</p></a></li>
-                    <li><a href="programming.html"><p>Programming</p></a></li>
-                    <li><a href="https://www.linkedin.com/in/adamkoziana/" target="_blank"><p>LinkedIn</p></a></li>
-                    <li><a href="https://www.artstation.com/shrowderetti" target="_blank"><p>ArtStation</p></a></li>
-                    <li><a href="https://github.com/Shrowderetti" target="_blank"><p>GitHub</p></a></li>
-                    <li><a href="https://github.com/Shrowderetti/CV" target="_blank"><p>CV</p></a></li>
-                    <li><a href="#contact"><p>Contact</p></a></li>
-                </ul>
-            </nav>
-        </nav>
-        <script>
-            const menuButton = document.getElementById("menubutton");
-            const menuList = document.getElementById("menulist");
-            const body = document.getElementById("body");
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography | Adam Koziana</title>
+    <link rel="stylesheet" href="main_look.css">
+    <link rel="stylesheet" href="subpages.css">
+</head>
+<body id="body">
 
-            menuButton.addEventListener("click", function (e) {
-                e.stopPropagation();
-                if (menuList.style.display === "flex") {
-                    menuList.style.display = "none";
-                } else {
-                    menuList.style.display = "flex";
-                }
-            });
+<!-- Nawigacja główna -->
+<nav class="modern-nav nav-scrolled">
+    <a href="index.html" class="nav-brand">AK.</a>
+    <button id="menubutton" class="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+</nav>
 
-            body.addEventListener("click", function () {
-                if (menuList.style.display === "flex") {
-                    menuList.style.display = "none";
-                }
-            });
-            // Button:
-            let mybutton = document.getElementById("myBtn");
+<!-- Pełnoekranowe menu -->
+<div id="menulist" class="fullscreen-menu">
+    <div class="menu-content">
+        <ul>
+            <li><a href="index.html">Main page</a></li>
+            <li><a href="photography.html">Photography</a></li>
+            <li><a href="3d.html">3D renders</a></li>
+            <li><a href="drawings.html">Drawings</a></li>
+            <li><a href="programming.html">Programming</a></li>
+            <li class="menu-separator"></li>
+            <li><a href="https://www.linkedin.com/in/adamkoziana/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.artstation.com/shrowderetti" target="_blank">ArtStation</a></li>
+            <li><a href="https://github.com/Shrowderetti" target="_blank">GitHub</a></li>
+        </ul>
+    </div>
+</div>
 
-            window.onscroll = function() {scrollFunction()};
-
-            function scrollFunction() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    mybutton.style.display = "block";
-                } else {
-                    mybutton.style.display = "none";
-                }
-            }
-
-            function topFunction() {
-                document.body.scrollTop = 0; // For Safari
-                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-            }
-        </script>
-        <section id="description">
-            <h2>Photography</h2>
-            <div id="content">
-                <p>Photography has always been present in my family, so it felt natural for me to pick up a camera and start shooting. I’ve explored many styles of photography, but the one that really stuck with me is architectural photography, with the occasional nature shot. I believe this preference is clearly reflected in the photos below.</p>
-            </div>
-        </section>
-        <div id="background"></div>
-        <div id="Vertical">
-            <img src="photos/Photography/DSC_8484.jpg" class="photoVer" alt="zdjecie" id="1_1">
-            <img src="photos/Photography/DSC_7231.jpg" class="photoVer" alt="zdjecie" id="1_2">
-            <img src="photos/Photography/DSC_4176.jpg" class="photoVer" alt="zdjecie" id="1_3">
-            <img src="photos/Photography/DSC_4115.jpg" class="photoVer" alt="zdjecie" id="1_4">
-            <img src="photos/Photography/DSC_4151.jpg" class="photoVer" alt="zdjecie" id="1_5">
-            <img src="photos/Photography/DSC_5211.jpg" class="photoVer" alt="zdjecie" id="1_6">
-            <img src="photos/Photography/DSC_5823.jpg" class="photoVer" alt="zdjecie" id="1_7">
-            <img src="photos/Photography/DSC_4067.jpg" class="photoVer" alt="zdjecie" id="1_8">
-            <img src="photos/Photography/DSC_4118.jpg" class="photoVer" alt="zdjecie" id="1_9">
-            <img src="photos/Photography/DSC_4143.jpg" class="photoVer" alt="zdjecie" id="1_10">
-            <img src="photos/Photography/DSC_8245.jpg" class="photoVer" alt="zdjecie" id="1_11">
-            <img src="photos/Photography/DSC_4193.jpg" class="photoVer" alt="zdjecie" id="1_12">
-            <img src="photos/Photography/DSC_3702.jpg" class="photoVer" alt="zdjecie" id="1_13">
-            <img src="photos/Photography/DSC_7302.jpg" class="photoVer" alt="zdjecie" id="1_14">
-            <img src="photos/Photography/DSC_3724.jpg" class="photoVer" alt="zdjecie" id="1_15">
-            <img src="photos/Photography/DSC_3519-2.jpg" class="photoVer" alt="zdjecie" id="1_16">
-            <img src="photos/Photography/DSC_3623.jpg" class="photoVer" alt="zdjecie" id="1_17">
-            <img src="photos/Photography/DSC_3709.jpg" class="photoVer" alt="zdjecie" id="1_18">
-            <img src="photos/Photography/DSC_5253.jpg" class="photoVer" alt="zdjecie" id="1_19">
-            <img src="photos/Photography/DSC_3966.jpg" class="photoVer" alt="zdjecie" id="1_20">
-            <img src="photos/Photography/DSC_4294.jpg" class="photoVer" alt="zdjecie" id="1_21">
-            <img src="photos/Photography/DSC_4062.jpg" class="photoVer" alt="zdjecie" id="1_22">
-            <img src="photos/Photography/DSC_4293.jpg" class="photoVer" alt="zdjecie" id="1_23">
-            <img src="photos/Photography/DSC_4294.jpg" class="photoVer" alt="zdjecie" id="1_24">
+<!-- Główna zawartość strony -->
+<main class="page-content">
+    <div class="page-header">
+        <h1 class="page-title">Photography</h1>
+        <div class="page-description">
+            <p>Photography has always been present in my family, so it felt natural for me to pick up a camera and start shooting. I’ve explored many styles of photography, but the one that really stuck with me is architectural photography, with the occasional nature shot. I believe this preference is clearly reflected in the photos below.</p>
         </div>
-        <div id="photo_indiv">
-            <img src="photos/Photography/DSC_8484.jpg" class="photo_indi_vert" alt="zdjecie" id="2_1">
-            <img src="photos/Photography/DSC_7231.jpg" class="photo_indi_vert" alt="zdjecie" id="2_2">
-            <img src="photos/Photography/DSC_4176.jpg" class="photo_indi_vert" alt="zdjecie" id="2_3">
-            <img src="photos/Photography/DSC_4115.jpg" class="photo_indi_vert" alt="zdjecie" id="2_4">
-            <img src="photos/Photography/DSC_4151.jpg" class="photo_indi_vert" alt="zdjecie" id="2_5">
-            <img src="photos/Photography/DSC_5211.jpg" class="photo_indi_vert" alt="zdjecie" id="2_6">
-            <img src="photos/Photography/DSC_5823.jpg" class="photo_indi_vert" alt="zdjecie" id="2_7">
-            <img src="photos/Photography/DSC_4067.jpg" class="photo_indi_vert" alt="zdjecie" id="2_8">
-            <img src="photos/Photography/DSC_4118.jpg" class="photo_indi_vert" alt="zdjecie" id="2_9">
-            <img src="photos/Photography/DSC_4143.jpg" class="photo_indi_vert" alt="zdjecie" id="2_10">
-            <img src="photos/Photography/DSC_8245.jpg" class="photo_indi_vert" alt="zdjecie" id="2_11">
-            <img src="photos/Photography/DSC_4193.jpg" class="photo_indi_vert" alt="zdjecie" id="2_12">
-            <img src="photos/Photography/DSC_3702.jpg" class="photo_indi_vert" alt="zdjecie" id="2_13">
-            <img src="photos/Photography/DSC_7302.jpg" class="photo_indi_vert" alt="zdjecie" id="2_14">
-            <img src="photos/Photography/DSC_3724.jpg" class="photo_indi_vert" alt="zdjecie" id="2_15">
-            <img src="photos/Photography/DSC_3519-2.jpg" class="photo_indi_vert" alt="zdjecie" id="2_16">
-            <img src="photos/Photography/DSC_3623.jpg" class="photo_indi_vert" alt="zdjecie" id="2_17">
-            <img src="photos/Photography/DSC_3709.jpg" class="photo_indi_vert" alt="zdjecie" id="2_18">
-            <img src="photos/Photography/DSC_5253.jpg" class="photo_indi_vert" alt="zdjecie" id="2_19">
-            <img src="photos/Photography/DSC_3966.jpg" class="photo_indi_vert" alt="zdjecie" id="2_20">
-            <img src="photos/Photography/DSC_4294.jpg" class="photo_indi_vert" alt="zdjecie" id="2_21">
-            <img src="photos/Photography/DSC_4062.jpg" class="photo_indi_vert" alt="zdjecie" id="2_22">
-            <img src="photos/Photography/DSC_4293.jpg" class="photo_indi_vert" alt="zdjecie" id="2_23">
-            <img src="photos/Photography/DSC_4294.jpg" class="photo_indi_vert" alt="zdjecie" id="2_24">
+    </div>
+
+    <!-- Galeria CSS Grid -->
+    <div class="gallery-grid">
+        <!-- Jeśli jakieś zdjęcie wykadrowało się źle, po prostu zmień słowo "vertical" na "horizontal" lub usuń je całkowicie (wtedy będzie kwadratem) -->
+        <div class="gallery-item vertical large"><img src="photos/Photography/DSC_7231.jpg" alt="Photography"></div>
+        <div class="gallery-item "><img src="photos/Photography/DSC_8484.jpg" alt="Photography"></div>
+        <div class="gallery-item vertical"><img src="photos/Photography/DSC_4176.jpg" alt="Photography"></div>
+        <div class="gallery-item vertical"><img src="photos/Photography/DSC_4115.jpg" alt="Photography"></div>
+        <div class="gallery-item"><img src="photos/Photography/DSC_4151.jpg" alt="Photography"></div>
+        <div class="gallery-item vertical"><img src="photos/Photography/DSC_4118.jpg" alt="Photography"></div>
+        <div class="gallery-item"><img src="photos/Photography/DSC_4293.jpg" alt="Photography"></div>
+        <div class="gallery-item vertical large"><img src="photos/Photography/DSC_5211.jpg" alt="Photography"></div>
+        <div class="gallery-item vertical"><img src="photos/Photography/DSC_4067.jpg" alt="Photography"></div>
+        <div class="gallery-item"><img src="photos/Photography/DSC_4143.jpg" alt="Photography"></div>
+        <div class="gallery-item vertical"><img src="photos/Photography/DSC_8245.jpg" alt="Photography"></div>
+        <div class="gallery-item"><img src="photos/Photography/DSC_4193.jpg" alt="Photography"></div>
+        <div class="gallery-item vertical"><img src="photos/Photography/DSC_3702.jpg" alt="Photography"></div>
+        <div class="gallery-item vertical"><img src="photos/Photography/DSC_7302.jpg" alt="Photography"></div>
+        <div class="gallery-item"><img src="photos/Photography/DSC_3724.jpg" alt="Photography"></div>
+        <div class="gallery-item vertical large"><img src="photos/Photography/DSC_5253.jpg" alt="Photography"></div>
+        <div class="gallery-item vertical"><img src="photos/Photography/DSC_3519-2.jpg" alt="Photography"></div>
+        <div class="gallery-item"><img src="photos/Photography/DSC_3623.jpg" alt="Photography"></div>
+        <div class="gallery-item vertical"><img src="photos/Photography/DSC_3709.jpg" alt="Photography"></div>
+        <div class="gallery-item"><img src="photos/Photography/DSC_3966.jpg" alt="Photography"></div>
+        <div class="gallery-item vertical"><img src="photos/Photography/DSC_4294.jpg" alt="Photography"></div>
+        <div class="gallery-item vertical large"><img src="photos/Photography/DSC_4062.jpg" alt="Photography"></div>
+    </div>
+</main>
+
+<!-- Stopka -->
+<footer class="minimal-footer">
+    <div class="footer-left">
+        <h3 class="footer-label">Get in touch</h3>
+        <div class="contact-details">
+            <p><span>Email:</span> <a href="mailto:koziana.adam@gmail.com">koziana.adam@gmail.com</a></p>
+            <p><span>Phone:</span> +48 698 855 029</p>
         </div>
-        <script>
-            $('.photoVer').click(function (){
-               $('#background').show();
-                $('#myBtn').hide();
-            });
-            $('#1_1').click(function (){
-                $('.photo_indi_vert').hide();
-                $('#2_1').toggle();
-            });
-            $('#1_2').click(function (){
-                $('.photo_indi_vert').hide();
-                $('#2_2').toggle();
-            });
-            $('#1_3').click(function (){
-                $('.photo_indi_vert').hide();
-                $('#2_3').toggle();
-            });
-            $('#1_4').click(function (){
-                $('.photo_indi_vert').hide();
-                $('#2_4').toggle();
-            });
-            $('#1_5').click(function (){
-                $('.photo_indi_vert').hide();
-                $('#2_5').toggle();
-            });
-            $('#1_6').click(function (){
-                $('.photo_indi_vert').hide();
-                $('#2_6').toggle();
-            });
-            $('#1_7').click(function (){
-                $('.photo_indi_vert').hide();
-                $('#2_7').toggle();
-            });
-            $('#1_8').click(function (){
-                $('.photo_indi_vert').hide();
-                $('#2_8').toggle();
-            });
-            $('#1_9').click(function (){
-                $('.photo_indi_vert').hide();
-                $('#2_9').toggle();
-            });
-            $('#1_10').click(function (){
-                $('.photo_indi_vert').hide();
-                $('#2_10').toggle();
-            });
-            $('#1_11').click(function (){
-                $('.photo_indi_vert').hide();
-                $('#2_11').toggle();
-            });
-            $('#1_12').click(function (){
-                $('.photo_indi_vert').hide();
-                $('#2_12').toggle();
-            });
-            $('#1_13').click(function (){
-                $('.photo_indi_vert').hide();
-                $('#2_13').toggle();
-            });
-            $('#1_14').click(function (){
-                $('.photo_indi_vert').hide();
-                $('#2_14').toggle();
-            });
-            $('#1_15').click(function (){
-                $('.photo_indi_vert').hide();
-                $('#2_15').toggle();
-            });
-            $('#1_16').click(function (){
-                $('.photo_indi_vert').hide();
-                $('#2_16').toggle();
-            });
-            $('#1_17').click(function (){
-                $('.photo_indi_vert').hide();
-                $('#2_17').toggle();
-            });
-            $('#1_18').click(function (){
-                $('.photo_indi_vert').hide();
-                $('#2_18').toggle();
-            });
-            $('#1_19').click(function (){
-                $('.photo_indi_vert').hide();
-                $('#2_19').toggle();
-            });
-            $('#1_20').click(function (){
-                $('.photo_indi_vert').hide();
-                $('#2_20').toggle();
-            });
-            $('#1_21').click(function (){
-                $('.photo_indi_vert').hide();
-                $('#2_21').toggle();
-            });
-            $('#1_22').click(function (){
-                $('.photo_indi_vert').hide();
-                $('#2_22').toggle();
-            });
-            $('#1_23').click(function (){
-                $('.photo_indi_vert').hide();
-                $('#2_23').toggle();
-            });
-            $('#1_24').click(function (){
-                $('.photo_indi_vert').hide();
-                $('#2_24').toggle();
-            });
-            $('.photo_indi_vert').click(function (){
-                $(this).toggle();
-                $('#background').hide();
-                $('#myBtn').show();
-            });
-            $('#background').click(function (){
-                $(this).hide();
-                $('.photo_indi_vert').hide();
-                $('#myBtn').show();
-            });
-        </script>
-        <footer>
-            <h2>Contact</h2>
-            <div id="contact">
-                <p>Phone: +48 698 855 029</p>
-                <p>E-mail: koziana.adam@gmail.com </p>
-            </div>
-            <div id="claims">
-                <p>@ 2026 Portfolio Adam Koziana. Wszelkie prawa zastrzeżone.</p>
-            </div>
-        </footer>
-    </body>
+    </div>
+    <div class="footer-right">
+        <p>&copy; 2026 Adam Koziana. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- LIGHTBOX (ukryty kontener na powiększone zdjęcie) -->
+<div id="lightbox" class="lightbox">
+    <img class="lightbox-content" id="lightbox-img" alt="Powiększone zdjęcie">
+</div>
+
+<!-- Skrypt obsługujący Menu i Lightbox -->
+<script>
+    const menuBtn = document.getElementById('menubutton');
+    const menuList = document.getElementById('menulist');
+    const navBar = document.querySelector('.modern-nav');
+    let isMenuOpen = false;
+
+    // 1. OBSŁUGA MENU I ZMIANY KOLORU PASKA
+    menuBtn.addEventListener('click', () => {
+        isMenuOpen = !isMenuOpen;
+        if (isMenuOpen) {
+            menuList.style.display = 'flex';
+            menuBtn.classList.add('open');
+            navBar.classList.remove('nav-scrolled');
+            navBar.style.color = '#FAFAFA';
+        } else {
+            menuList.style.display = 'none';
+            menuBtn.classList.remove('open');
+            navBar.classList.add('nav-scrolled');
+            navBar.style.color = '';
+        }
+    });
+
+    // 2. OBSŁUGA POWIĘKSZANIA ZDJĘĆ (Lightbox)
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const galleryImages = document.querySelectorAll('.gallery-item img');
+
+    // Otwieranie zdjęcia
+    galleryImages.forEach(img => {
+        img.addEventListener('click', () => {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
+        });
+    });
+
+    // Zamykanie powiększenia po kliknięciu gdziekolwiek
+    lightbox.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+</script>
+</body>
 </html>
