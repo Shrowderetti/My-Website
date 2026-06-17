@@ -18,6 +18,10 @@
 	box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'BodyText', sans-serif;
 	margin: 0;
@@ -38,7 +42,7 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	z-index: 100;
-	color: #FAFAFA; /* Biały tekst na tle zdjęcia powitalnego */
+	color: #FAFAFA;
 	background-color: transparent;
 	transition: background-color 0.4s ease, color 0.4s ease, padding 0.4s ease;
 }
@@ -68,17 +72,14 @@ body {
 	justify-content: center;
 	align-items: center;
 	gap: 6px;
-	/* Zwiększamy niewidzialny kontener, dając "ikonie X" miejsce na obrót */
 	width: 44px;
 	height: 44px;
 	padding: 0;
 	z-index: 101;
 	color: inherit;
-	/* Gwarantuje, że krawędzie przycisku nie utną rotujących elementów */
 	overflow: visible;
 }
 
-/* Wygląd pojedynczej kreski pozostaje bez zmian (małe, zaokrąglone) */
 .menu-toggle .bar {
 	width: 24px;
 	height: 2px;
@@ -202,6 +203,12 @@ body {
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 	color: #FAFAFA;
+	text-decoration: none;
+	transition: opacity 0.3s ease;
+}
+
+.scroll-indicator:hover {
+	opacity: 0.6;
 }
 
 .scroll-indicator .line {
@@ -244,15 +251,15 @@ body {
 
 /* --- CV BUTTON --- */
 .about-cv-link {
-	margin-top: 2.5em; /* Odstęp pod tekstem "About" */
+	margin-top: 2.5em;
 	display: flex;
-	justify-content: flex-start; /* Przycisk trzyma się lewej strony */
+	justify-content: flex-start;
 }
 
 .cv-button {
 	display: inline-block;
 	padding: 0.8em 2.5em;
-	border: 1px solid var(--text-color); /* Cienka ramka w kolorze tekstu */
+	border: 1px solid var(--text-color);
 	color: var(--text-color);
 	text-decoration: none;
 	font-family: 'Title', serif;
@@ -262,7 +269,6 @@ body {
 	transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* Efekt najechania: odwrócenie kolorów */
 .cv-button:hover {
 	background-color: var(--text-color);
 	color: var(--bg-color);
@@ -355,6 +361,11 @@ body {
 }
 
 @media (max-width: 900px) {
+	.hero-section {
+		background-attachment: scroll; /* Wyłącza "parallax", naprawiając skalowanie w iOS Safari */
+		background-position: center center;
+	}
+
 	.about-text {
 		column-count: 1;
 	}
@@ -367,7 +378,7 @@ body {
 		font-size: 3.5em;
 	}
 
-	.minimal-footer-dark {
+	.minimal-footer {
 		flex-direction: column;
 		align-items: center;
 		gap: 3em;
@@ -375,25 +386,25 @@ body {
 		text-align: center;
 	}
 
-	.footer-label {
-		border-bottom: none; /* Na telefonie możemy zrezygnować z linii dla czystości */
-	}
-
 	.work-item {
-		padding: 1.5em 0; /* Zmniejszamy pionowy padding */
+		padding: 1.5em 0;
 	}
 
 	.work-name {
-		font-size: 1.8em; /* Zmniejszamy font na bardzo małe ekrany */
-		word-break: break-word; /* Pozwala na zawinięcie długich nazw wierszy */
+		font-size: 1.8em;
+		word-break: break-word;
 	}
 
 	.work-number {
 		font-size: 1em;
-		margin-right: 1em; /* Zmniejszamy odstęp między numerem a nazwą */
+		margin-right: 1em;
 	}
 
 	.work-item:hover {
-		padding-left: 0.5em; /* Zmniejszamy "wjazd" tekstu przy hoverze, by nie powodował scrolla */
+		padding-left: 0.5em;
+	}
+
+	.scroll-indicator:hover {
+		opacity: 1;
 	}
 }

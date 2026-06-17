@@ -1,7 +1,6 @@
 /* --- FORMATOWANIE PODSTRON --- */
 
 .page-content {
-    /* Duży margines górny, żeby zawartość nie wjechała pod pasek menu */
     padding: 12em 4em 4em;
     max-width: 1400px;
     margin: 0 auto;
@@ -19,7 +18,7 @@
 .page-title {
     font-family: 'Title', serif;
     font-size: 3.5em;
-    margin: 0 0 0.2em 0;
+    margin: 0 0.2em 0.2em 0;
     text-transform: uppercase;
     color: #111111;
 }
@@ -36,24 +35,23 @@
 /* --- GRID GALERIA --- */
 .gallery-grid {
     display: grid;
-    /* Tworzy kolumny, z których każda ma minimum 300px szerokości */
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-auto-rows: 300px; /* Bazowa wysokość wiersza */
-    grid-auto-flow: dense; /* Automatyczne zapełnianie luk w siatce */
+    grid-auto-rows: 300px;
+    grid-auto-flow: dense;
     gap: 20px;
 }
 
 .gallery-item {
     position: relative;
     overflow: hidden;
-    background-color: #f5f5f5; /* Jasne tło widoczne podczas ładowania zdjęcia */
-    border-radius: 4px; /* Opcjonalne, delikatne zaokrąglenie rogów zdjęć */
+    background-color: #f5f5f5;
+    border-radius: 4px;
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Gwarantuje wypełnienie całego kafelka bez deformacji proporcji */
+    object-fit: cover;
     transition: transform 0.6s ease;
 }
 
@@ -86,14 +84,14 @@
 
 /* --- LIGHTBOX (Podgląd zdjęć) --- */
 .lightbox {
-    display: none; /* Domyślnie ukryty */
+    display: none;
     position: fixed;
-    z-index: 1000; /* Zawsze na samej górze */
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(17, 17, 17, 0.95); /* Eleganckie, prawie czarne tło */
+    background-color: rgba(17, 17, 17, 0.95);
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -102,8 +100,8 @@
 .lightbox-content {
     max-width: 90vw;
     max-height: 90vh;
-    object-fit: contain; /* Gwarantuje, że całe zdjęcie zmieści się na ekranie bez ucinania */
-    box-shadow: 0 4px 25px rgba(0,0,0,0.5); /* Lekki cień pod powiększonym zdjęciem */
+    object-fit: contain;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.5);
     border-radius: 4px;
 }
 
@@ -122,14 +120,11 @@
     opacity: 0.6;
 }
 
-/* Kursor łapki w galerii, by sugerować możliwość kliknięcia */
 .gallery-item {
     cursor: pointer;
 }
 
-
-
-/* --- RESPONSIVE DESIGN (telefony) --- */
+/* --- RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
     .page-content {
         padding: 8em 2em 2em;
@@ -140,19 +135,28 @@
     }
 
     .gallery-grid {
-        grid-template-columns: 1fr; /* Na telefonie 1 kolumna (zdjęcia jedno pod drugim) */
-        grid-auto-rows: auto; /* Wysokość dopasowuje się do zdjęcia */
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
     }
 
-    /* Na telefonach ignorujemy span, wszystko układa się pojedynczo */
     .gallery-item.vertical,
     .gallery-item.horizontal,
-    .gallery-item.large {
+    .gallery-item.large,
+    .gallery-item.horizontal.large,
+    .gallery-item.vertical.large {
         grid-column: span 1;
         grid-row: span 1;
     }
 
     .gallery-item img {
-        aspect-ratio: 4/3; /* Na telefonie wymusza stałe proporcje kafelków */
+        aspect-ratio: 4/3;
+    }
+
+    .minimal-footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+        padding: 3em 2em;
+        text-align: center;
     }
 }
