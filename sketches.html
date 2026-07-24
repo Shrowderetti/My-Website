@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography | Adam Koziana</title>
+    <title>Sketches | Adam Koziana</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="main_look.css">
     <link rel="stylesheet" href="subpages.css">
@@ -43,38 +43,26 @@
 <!-- Główna zawartość strony -->
 <main class="page-content">
     <div class="page-header">
-        <h1 class="page-title">Photography</h1>
+        <h1 class="page-title">Sketches</h1>
         <div class="page-description">
-            <p>Photography has always been present in my family, so it felt natural for me to pick up a camera and start shooting. I’ve explored many styles of photography, but the one that really stuck with me is architectural photography, with the occasional nature shot. I believe this preference is clearly reflected in the photos below.</p>
+            <p>A raw look into my creative process and spatial thinking. These sketchbook pages are where rough ideas, architectural details, and structural compositions first take shape before being turn into fully realized projects.</p>
         </div>
     </div>
 
     <!-- Galeria CSS Grid -->
     <div class="gallery-grid">
-        <!-- Jeśli jakieś zdjęcie wykadrowało się źle, po prostu zmień słowo "vertical" na "horizontal" lub usuń je całkowicie (wtedy będzie kwadratem) -->
-        <div class="gallery-item vertical large"><img src="photos/Photography/DSC_7231.jpg" alt="Photography"></div>
-        <div class="gallery-item "><img src="photos/Photography/DSC_8484.jpg" alt="Photography"></div>
-        <div class="gallery-item vertical"><img src="photos/Photography/DSC_4176.jpg" alt="Photography"></div>
-        <div class="gallery-item vertical"><img src="photos/Photography/DSC_4115.jpg" alt="Photography"></div>
-        <div class="gallery-item"><img src="photos/Photography/DSC_4151.jpg" alt="Photography"></div>
-        <div class="gallery-item vertical"><img src="photos/Photography/DSC_4118.jpg" alt="Photography"></div>
-        <div class="gallery-item"><img src="photos/Photography/DSC_4293.jpg" alt="Photography"></div>
-        <div class="gallery-item vertical large"><img src="photos/Photography/DSC_5211.jpg" alt="Photography"></div>
-        <div class="gallery-item vertical"><img src="photos/Photography/DSC_4067.jpg" alt="Photography"></div>
-        <div class="gallery-item"><img src="photos/Photography/DSC_4143.jpg" alt="Photography"></div>
-        <div class="gallery-item vertical"><img src="photos/Photography/DSC_8245.jpg" alt="Photography"></div>
-        <div class="gallery-item"><img src="photos/Photography/DSC_4193.jpg" alt="Photography"></div>
-        <div class="gallery-item vertical"><img src="photos/Photography/DSC_3702.jpg" alt="Photography"></div>
-        <div class="gallery-item vertical"><img src="photos/Photography/DSC_7302.jpg" alt="Photography"></div>
-        <div class="gallery-item"><img src="photos/Photography/DSC_3724.jpg" alt="Photography"></div>
-        <div class="gallery-item vertical large"><img src="photos/Photography/DSC_5253.jpg" alt="Photography"></div>
-        <div class="gallery-item vertical"><img src="photos/Photography/DSC_3519-2.jpg" alt="Photography"></div>
-        <div class="gallery-item horizontal"><img src="photos/Photography/DSC_6373.jpg" alt="Photography"></div>
-        <div class="gallery-item"><img src="photos/Photography/DSC_3623.jpg" alt="Photography"></div>
-        <div class="gallery-item vertical"><img src="photos/Photography/DSC_3709.jpg" alt="Photography"></div>
-        <div class="gallery-item"><img src="photos/Photography/DSC_3966.jpg" alt="Photography"></div>
-        <div class="gallery-item vertical"><img src="photos/Photography/DSC_4294.jpg" alt="Photography"></div>
-        <div class="gallery-item vertical large"><img src="photos/Photography/DSC_4062.jpg" alt="Photography"></div>
+        <div class="gallery-item horizontal"><img src="photos/Sketches/IMG_2097.jpg" alt="Sketch 2097"></div>
+        <div class="gallery-item vertical"><img src="photos/Sketches/IMG_2100.jpg" alt="Sketch 2100"></div>
+        <div class="gallery-item vertical"><img src="photos/Sketches/IMG_2101.jpg" alt="Sketch 2101"></div>
+        <div class="gallery-item vertical"><img src="photos/Sketches/IMG_2102.jpg" alt="Sketch 2102"></div>
+        <div class="gallery-item horizontal"><img src="photos/Sketches/IMG_2103.jpg" alt="Sketch 2103"></div>
+        <div class="gallery-item vertical"><img src="photos/Sketches/IMG_2104.jpg" alt="Sketch 2104"></div>
+        <div class="gallery-item vertical"><img src="photos/Sketches/IMG_2105.jpg" alt="Sketch 2105"></div>
+        <div class="gallery-item vertical"><img src="photos/Sketches/IMG_2106.jpg" alt="Sketch 2106"></div>
+        <div class="gallery-item vertical"><img src="photos/Sketches/IMG_2107.jpg" alt="Sketch 2107"></div>
+        <div class="gallery-item horizontal"><img src="photos/Sketches/IMG_2108.jpg" alt="Sketch 2108"></div>
+        <div class="gallery-item vertical"><img src="photos/Sketches/IMG_2109.jpg" alt="Sketch 2109"></div>
+        <div class="gallery-item vertical"><img src="photos/Sketches/IMG_2110.jpg" alt="Sketch 2110"></div>
     </div>
 </main>
 
@@ -92,7 +80,7 @@
     </div>
 </footer>
 
-<!-- LIGHTBOX (ukryty kontener na powiększone zdjęcie) -->
+<!-- LIGHTBOX -->
 <div id="lightbox" class="lightbox">
     <img class="lightbox-content" id="lightbox-img" alt="Powiększone zdjęcie">
 </div>
@@ -104,7 +92,6 @@
     const navBar = document.querySelector('.modern-nav');
     let isMenuOpen = false;
 
-    // 1. OBSŁUGA MENU I ZMIANY KOLORU PASKA
     menuBtn.addEventListener('click', () => {
         isMenuOpen = !isMenuOpen;
         if (isMenuOpen) {
@@ -120,12 +107,10 @@
         }
     });
 
-    // 2. OBSŁUGA POWIĘKSZANIA ZDJĘĆ (Lightbox)
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const galleryImages = document.querySelectorAll('.gallery-item img');
 
-    // Otwieranie zdjęcia
     galleryImages.forEach(img => {
         img.addEventListener('click', () => {
             lightbox.style.display = 'flex';
@@ -133,7 +118,6 @@
         });
     });
 
-    // Zamykanie powiększenia po kliknięciu gdziekolwiek
     lightbox.addEventListener('click', () => {
         lightbox.style.display = 'none';
     });
