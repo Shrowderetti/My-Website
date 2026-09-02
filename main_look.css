@@ -121,7 +121,7 @@ body {
 }
 
 .fullscreen-menu ul li a {
-	font-size: clamp(1.2rem, 4vh, 2.5rem);
+	font-size: clamp(0.8rem, 4vh, 2.5rem);
 }
 
 .fullscreen-menu ul li {
