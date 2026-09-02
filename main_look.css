@@ -104,58 +104,53 @@ body {
 
 /* --- PEŁNOEKRANOWE MENU --- */
 .fullscreen-menu {
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	background-color: var(--text-color);
-	color: var(--bg-color);
-	z-index: 90;
-	justify-content: center;
-	align-items: flex-start;
-	padding-top: 10vh;
-	padding-bottom: 5vh;
-	overflow-y: auto;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    z-index: 90;
+    justify-content: center;
+    align-items: center; /* ZMIANA: Środkuje menu w pionie */
+    padding: 0; /* ZMIANA: Usunięto sztuczne marginesy górne/dolne */
+    overflow-y: auto; /* Zostawiamy w razie mikroskopijnych ekranów */
 }
 
-.fullscreen-menu ul li a {
-	font-size: clamp(0.8rem, 4vh, 2.5rem);
-}
-
+/* Ujednolicone odstępy między linkami */
 .fullscreen-menu ul li {
-	margin: clamp(0.5rem, 1.5vh, 1.5rem) 0;
+    /* Zmniejszone minimum do 0.2rem i proporcja do 1.2vh */
+    margin: clamp(0.2rem, 1.2vh, 1rem) 0; 
 }
 
 .menu-content ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
-.menu-content li {
-	margin: 1.5vh 0;
-}
-
+/* Ujednolicony i zmniejszony rozmiar czcionki */
 .menu-content a {
-	font-family: 'Title', serif;
-	font-size: clamp(1.5em, 4vh, 2.5em);
-	color: var(--bg-color);
-	text-decoration: none;
-	transition: opacity 0.3s ease;
+    font-family: 'Title', serif;
+    /* Zmniejszone minimum do 1rem i vh do 3.5vh, usunięto duplikaty */
+    font-size: clamp(1rem, 3.5vh, 2.5rem); 
+    color: var(--bg-color);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
 }
 
 .menu-separator {
-	height: 1px;
-	background-color: #333;
-	margin: 2vh auto;
-	width: 50%;
+    height: 1px;
+    background-color: #333;
+    margin: 1.5vh auto; /* Zmniejszony margines separatora */
+    width: 50%;
 }
 
 .menu-content a:hover {
-	opacity: 0.5;
+    opacity: 0.5;
 }
 
 
